@@ -26,7 +26,7 @@ included. Don't edit them; fixes and annotations belong in `modernized/`.
 
 ## Status
 
-Just started. See `modernized/samples/` for first examples.
+In progress. Part 1: Introduction drafted (`modernized/part1-ethics/00-introduction.md`). See `modernized/samples/` for the style rounds.
 
 ## Licensing
 
@@ -39,4 +39,5 @@ are dedicated to the public domain under
 [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) (see
 `LICENSE`). Use, adapt, publish, or sell it, with no permission or credit
 required. The `LICENSE` covers our additions only, not the Gutenberg files in
-`original/`.
+`original/`, and it does not cover the NET Bible® Scripture quotations; see
+[NOTICE.md](NOTICE.md).

@@ -53,15 +53,26 @@ direct, urgent, pastoral.
 ## Scripture
 
 - Baxter cites by "Isa. lv. 1-3" style. Convert to "Isaiah 55:1–3".
-- His quotations are from the KJV or his own paraphrase. Keep a quoted verse
-  close to the KJV wording when he quotes it, and modernize only
-  the words that are archaic (e.g., "thee"); leave a reference to the
-  original text in a note if he paraphrases loosely.
+- **Translation: NET Bible®.** Baxter quotes the King James Version, often
+  loosely or in fragments. Where he quotes a verse, use the NET wording of
+  that verse, keeping the extent of what he quotes (a phrase stays a phrase;
+  use "..." where he skips). Fetch the text; do not quote it from memory.
+  Baxter's own prose around the quotation is modernized as usual.
+- If he paraphrases rather than quotes, keep his paraphrase, modernized, and
+  say so in the translator's notes.
+- Note it when the NET wording changes the sense he is leaning on (for
+  example "narrow door" for "strait gate").
+- Verse text and its NOTICE terms: see [NOTICE.md](NOTICE.md).
+- **Misprinted references:** if a reference is clearly wrong in the 1846
+  text (for example "Heb. xxi. 14," where Hebrews has 13 chapters), use the
+  correct one and say so in the translator's notes.
 
 ## Notes and marks
 
 - Baxter's own footnote numbers from the Gutenberg text (e.g. `[7]`) are kept
-  if the footnote is carried over.
+  and the footnotes are carried over under "Baxter's notes." Latin stays
+  verbatim with a draft English translation in parentheses after each
+  passage; English in his notes is modernized like the body.
 - Our notes use `[Note: …]` in the text or a "Translator's notes" section at
   the end of each file. Notes are for: shifted word meanings, historical
   context, dated claims (medical, social), and places where we chose between
@@ -70,7 +81,9 @@ direct, urgent, pastoral.
 
 ## File layout
 
-- `modernized/part1-ethics/chNN-short-title.md` etc.
+- `modernized/part1-ethics/chNN-partN-NN-short-title.md` etc., one file per
+  section (an opening address, a numbered list, or a single Direction),
+  numbered in reading order. The Introduction is `00-introduction.md`.
 - Each file starts with front matter: source file, line range in the Gutenberg
   text, status (`draft` | `reviewed`), date.
 - Samples live in `modernized/samples/` until a passage is accepted into the
