@@ -26,7 +26,7 @@ included. Don't edit them; fixes and annotations belong in `modernized/`.
 
 ## Status
 
-In progress. Part 1: Introduction and Chapter 1, Part 1 (all 20 Directions) and Chapter 1, Part 2 (all Temptations) drafted, so Chapter 1 is complete; Chapter 2 opening and Directions 1-5 drafted (`modernized/part1-ethics/`). See `modernized/samples/` for the style rounds.
+In progress. Part 1: Introduction and Chapter 1, Part 1 (all 20 Directions) and Chapter 1, Part 2 (all Temptations) drafted, so Chapter 1 is complete; Chapter 2 opening and Directions 1-6 drafted (`modernized/part1-ethics/`). See `modernized/samples/` for the style rounds.
 
 ## Licensing
 
