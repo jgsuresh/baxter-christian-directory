@@ -7,7 +7,7 @@ modernized: 2026-11-24
 
 # Chapter 1, Part 2: Second Series, Temptations 1–3
 
-*Baxter's second series of nine subordinate Temptations, each answering the excuse that a sin is "only an infirmity." He restarts the numbering at 1. Labels below say "second series" to keep them apart from the first thirty.*
+*Baxter's second series of ten subordinate Temptations, each answering the excuse that a sin is "only an infirmity." He restarts the numbering at 1. Labels below say "second series" to keep them apart from the first thirty.*
 
 **Temptation 1 (second series).** But here are many subordinate temptations by which Satan persuades them that their sins are but infirmities: one is because their sin is only in the heart, and does not appear in outward deeds: and they take *restraint* for sanctification.
 

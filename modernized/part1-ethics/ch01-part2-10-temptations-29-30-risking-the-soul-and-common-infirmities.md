@@ -17,7 +17,7 @@ modernized: 2026-11-24
 
 \* \* \* \* \*
 
-*(This ends Baxter's first series of thirty Temptations. A second series of nine subordinate Temptations, on the particular excuse "they are but infirmities," follows; Baxter restarts the numbering at 1.)*
+*(This ends Baxter's first series of thirty Temptations. A second series of ten subordinate Temptations, on the particular excuse "they are but infirmities," follows; Baxter restarts the numbering at 1.)*
 
 ---
 

@@ -43,4 +43,4 @@ Reproduced as in the source, with the Scripture references in modern form. (Foot
 - **foolish virgins; harvest time; tide time:** left as in Baxter. **tide time** means the time when the tide is in, the opportunity.
 - **"the learnedest doctor"** (Direction 1): rendered "the most learned doctor" (doctor here means a scholar).
 - **"thou" and "you"** (Direction 1): Baxter shifts between "you" and "thou" in this Direction; we use "you" throughout.
-- **Structure of Part 2:** after this opening, Baxter lists thirty numbered "Temptations," each followed by a "Direction" that is the remedy, and then a second series of nine subordinate temptations. We number them as he does and bold each Temptation and Direction label.
+- **Structure of Part 2:** after this opening, Baxter lists thirty numbered "Temptations," each followed by a "Direction" that is the remedy, and then a second series of ten subordinate temptations. We number them as he does and bold each Temptation and Direction label.
