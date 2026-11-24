@@ -32,4 +32,11 @@ Just started. See `modernized/samples/` for first examples.
 
 Baxter (d. 1691) and the 1846 edition are public domain. Project Gutenberg's
 license terms apply to the files in `original/` if you keep its header; see
-the top of each file. Licensing for the modernized text is not yet decided.
+the top of each file.
+
+The modernized text, glossary, style guide, and everything else this repo adds
+are dedicated to the public domain under
+[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) (see
+`LICENSE`). Use, adapt, publish, or sell it, with no permission or credit
+required. The `LICENSE` covers our additions only, not the Gutenberg files in
+`original/`.
