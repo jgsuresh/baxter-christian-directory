@@ -1,0 +1,68 @@
+---
+source: original/part1-gutenberg-41633.txt
+source_lines: 2206-2332
+status: draft
+modernized: 2026-11-24
+---
+
+# Chapter 1, Part 1 (continued): What Baxter Assumes About the Reader, Items 1–9
+
+Baxter's marginal summaries appear in italics above each item.
+
+*Presupposed, that you are a man.*
+
+1. I suppose you to be a man, and therefore that you have reason and natural free will (that is, the natural faculty of choosing and refusing), which should keep your sensory appetite in obedience; and that you are capable of loving and serving your Creator, and enjoying him in everlasting life.
+
+*That you know this: and what a man is.*
+
+2. I suppose that you know yourself to be a man; and therefore that your sensory part, or flesh, should no more rule you, or be ungoverned by you, than the horse should rule the rider, or be unruled by him: and that you understand that you are made on purpose to love and serve your Maker, and to be happy in his love and glory forever. If you do not know this much, you do not know that you are a man, or else you do not know what a man is.
+
+*That you have self-love and a desire to be happy.*
+
+3. I suppose you to have a natural self-love, and a desire for your own preservation and happiness; and that you have no desire to be miserable, or to be hated by God, or to be cast out of his favor and presence into hell, and there to be tormented with devils everlastingly: indeed, I will suppose that you are not indifferent whether you dwell in heaven or hell, in joy or torment; but would gladly be saved and be happy; whether you are godly or ungodly, wise or foolish, I will be bold to take all this for granted: and I hope in all this I do not wrong you.
+
+*That you did not make yourself: and that the first cause of all the being, power, wisdom, and goodness of all the creatures has (formally or eminently) more than all of them. And therefore that there is a God.*
+
+4. I suppose you to be one that knows that you did not make yourself; [12] nor give yourself that power or wisdom which you have; and that he that made you and all the world must necessarily be before all the world; and that he is eternal, having no beginning (for if ever there had been a time when there was nothing, there never would have been anything; because nothing can make nothing); and I suppose you confess that all the power, and wisdom, and goodness of the whole creation set together is less than the power, and wisdom, and goodness of the Creator; because nothing can give more than it has to give. I suppose, therefore, that you confess that there is a God; for to be the eternal, infinite Being, and the most powerful, wise, and good, and the first cause of all created being, and power, and wisdom, and goodness, this (with the subsequent relations to the creature) is to be GOD. If you will deny that there is a God, you must deny that you are a man, and that there is any man, or any being.
+
+*That the Creator of all is the Lord or Owner of all; the Ruler of the rational creature; and the Benefactor and End of all.*
+
+5. I suppose you know that God, who gave being to all things, is by this title of creation the absolute Owner or Lord of all: and that he that made the rational creatures, with natures to be governed, in order to a further end, is by that title their supreme Governor; and therefore has his laws commanding duty, and promising reward, and threatening punishment; and therefore will judge men according to these laws, and will be just in judgment, and in his rewards and punishments. And that he that freely gave the creature its being, and all the good it has, and must give it all that ever it shall have, is the Father or most bountiful Benefactor to his creatures. Surely I do not set the bar too high in supposing you to know all this; for all this is no more than that there is a God. For he is not God if he is not the Creator, and therefore our Owner, our Ruler, and Benefactor, our absolute Lord, our most righteous Governor, and our most loving Father, or Benefactor.
+
+*That this God must be obeyed and loved.*
+
+6. I suppose therefore that you are convinced that God must be absolutely submitted to, and obeyed before all others in the world, and loved above all friends, or pleasures, or creatures whatsoever. For to say, He is my Owner, is to say, I must yield myself to him as his own; to say, I take him for my supreme Governor, is to say that I will absolutely be ruled by him; and to say, I take him as my dearest Father or chief Benefactor, is to say that I am obliged to give him my dearest love and highest thanks: otherwise you do but jest, or say you do not know what, or contradict yourselves, while you say, He is your God.
+
+*That nothing is to be preferred to him.*
+
+7. I suppose that you are easily convinced that in all the world there is no creature that can show so full a title to you as God; or that has so great authority to govern you, or that can be so good to you, or do so much for you, as God can do, or has done, and will do, if you do your part; and therefore that there is nothing to be preferred to him, or compared with him in our obedience or love: nor is there any that can save us from his justice, if we hold out against him.
+
+*That he who rules the world by hopes and fears of another life does not rule them by deceit and lies, and that he has rewards and punishments hereafter.*
+
+8. I suppose that as you know God is just in his laws and judgments, [13] so also that he is so faithful that he will not, and so all-sufficient that he need not, deceive mankind, and govern them by mere deceit: this better befits the devil than God: and therefore that as he governs man on earth by the hopes and fears of another life, he does not delude them into such hopes or fears; and as he does not procure obedience by any rewards or punishments in this life, as the principal means (the wicked prospering, and the best being persecuted and afflicted here), therefore his rewards or punishments must necessarily be principally hereafter in the life to come. For if he has no rewards or punishments, he has no judgment; and if he has no judgment, he has no laws (or else no justice); and if he has no laws (or no justice), he is no governor of man (or not a righteous governor); and if he is not our governor (and just), he is not our God; and if he were not our God, we would never have been his creatures, nor had being, or been men.
+
+*That man, being bound to love and obey God above all, is bound to do nothing in vain, and that we cannot be losers by his service.*
+
+9. I suppose you know that if God had not revealed what he would do with us in the life to come, yet man is most highly bound to obey and love his Maker, because he is our absolute Lord, our highest Ruler, and our chief Benefactor; and all that we are to have is from him. And that if man is bound to spend his life in the service of his God, it is certain that he shall be no loser by him, no, not by the costliest obedience that we can perform; for God cannot appoint us anything that is vain; nor can he be worse to us than an honest man, who will see that we do not lose by his service. Therefore that God for whom we must spend and forsake this life, and all those pleasures which pleasure-seekers enjoy, has certainly some greater thing to give us in another life.
+
+---
+
+## Baxter's notes
+
+Reproduced exactly as in the source; Latin and Greek are not modernized, and a draft English translation follows each Latin passage in parentheses. The translations were prepared for this project and are not from a published edition; have a Latinist check them before relying on fine points. Baxter's English in the notes is modernized.
+
+[12] Cum despicere cœpimus et sentire, quid simus, et quid ab animantibus cæteris differamus, tum ea insequi incipiemus ad quæ nati sumus. Cicero 5. de finib. (When we begin to look upon ourselves and to perceive what we are, and how we differ from the other living creatures, then we shall begin to pursue the things for which we were born. Cicero, *On Ends*, book 5.) See the proof of the Godhead, and that God is the Governor of the world, and that there is another life for man, in the beginning of my "Holy Commonwealth," chap. 1, 2, 3. Commoda quibus utimur, lucem qua fruimur, spiritum quem ducimus, à Deo nobis dari et impartiri videmus. Cicero pro Ros. (We see that the advantages we use, the light we enjoy, and the breath we draw are given and imparted to us by God. Cicero, *For Roscius*.) Quis est tam vecors, qui cum suspexerit in cœlum, deos esse non sentiat? et ea quæ tanta mente fiunt, ut vix quisquam arte ulla ordinem rerum atque vicissitudinem persequi possit, casu fieri putet? Cicero de Resp. Arusp. (Who is so senseless that, when he has looked up at the heavens, he does not perceive that there are gods? And who would think that things done with such great intelligence, so that scarcely anyone can follow the order and succession of events by any art, happen by chance? Cicero, *On the Response of the Soothsayers*.) Read Galen's Hymns to the Creator, Li. de usu partium, præcipuè, 1. iii. cap. 10. (Galen, *On the Use of the Parts*, especially book 3, chapter 10.) Nulla gens est tam immansueta, neque tam ferrea, quæ non etiamsi ignoret qualem Deum habere deceat, tamen habendum sciat. Cic. 1. de Leg. (No nation is so untamed or so hard that, even if it does not know what kind of God it ought to have, it does not still know that it must have one. Cicero, *On the Laws*, book 1.) Omnibus innatum, et quasi insculptum est, esse deos. Id de Nat. Deor. (It is innate in all people, and as if engraved on them, that there are gods. The same, *On the Nature of the Gods*.) Agnoscimus Deum ex operibus ejus. Cic. 1. Tusc. (We recognize God from his works. Cicero, *Tusculan Disputations*, book 1.) Nullum est animal præter hominem quod habet ullam notitiam Dei. Cic. 1. de Legib. (There is no animal except man that has any knowledge of God. Cicero, *On the Laws*, book 1.) Nulla gens tam fera, cujus mentem non imbuerit deorum opinio. Cic. 1. Tusc. (No nation is so wild that the belief in gods has not tinged its mind. Cicero, *Tusculan Disputations*, book 1.) "I would rather believe all the Legends, Talmud, Qur'an, than that this universal frame is without a mind." Lord Bacon, Essay 16. "A little philosophy inclines man's mind to atheism: but depth in philosophy brings men's minds around to religion." Lord Bacon, Essay 16. Stoici dicunt unum deum esse, ipsumque et mentem et fatum et Jovem dicunt: principio illum cum esset apud se, substantiam omnem per aerem in aquam convertisse--Quod autem faciat, Verbum Deum esse quod in ipsa sit. Hunc enim quippe sempiternum per ipsam (materiam) omnem singula creare. Mundum quoque regi et administrari secundum mentem et providentiam mente per omnes illius partes pertingente--Laert. in Zenone. (The Stoics say that there is one god, and they call him both mind and fate and Jupiter: that in the beginning, being by himself, he turned all substance through air into water ... As for what makes it, the Word is God, who is in it. For this eternal one creates each thing through all of matter. The world also is ruled and administered according to mind and providence, mind reaching through all its parts. Diogenes Laertius, *Life of Zeno*. The middle sentence is obscure; rendered roughly.)
+
+[13] Mundus numine regitur, estque quasi communis urbs et civitas hominum. Cicero 2. de finib. (The world is ruled by divine will, and is, as it were, the common city and commonwealth of mankind. Cicero, *On Ends*, book 2.) Impiis apud inferos sunt pœnæ præparatæ. Cicero 1. de Invent. (Punishments are prepared for the wicked in the underworld. Cicero, *On Invention*, book 1.) Impii apud inferos pœnas luunt. Idem. Phil, et 1. de Legib. (The wicked pay penalties in the underworld. The same, *Philippics*, and *On the Laws*, book 1.) Jovem dominatorem rerum, et omnia nutu regentem, et præsentem et præpotentem, qui dubitat, haud sanè intelligo, cur non idem, sol sit, an nullus sit dubitari possit. Cicer. de Nat. Deor. 2. p. 48. (Whoever doubts that Jupiter is lord of all things, ruling everything by his nod, present and all-powerful, I do not see why he should not equally be able to doubt whether the sun exists or not. Cicero, *On the Nature of the Gods*, book 2.)
+
+## Translator's notes
+
+- **sensory appetite** (item 1) and **sensory part** (item 2): Baxter's "sensitive appetite" and "sensitive part." He is using the older philosophical sense: the part of us that desires and reacts through the senses, as opposed to reason and will. It does not mean "touchy."
+- **formally or eminently** (margin note, item 4): scholastic terms. A cause has something "formally" if it has it in the same form, and "eminently" if it has it in a higher form. Baxter's point is that the Creator must have at least all that his creatures have. Left as written.
+- **relations** (item 4): Baxter's "subsequent relations to the creature" means the relationships God stands in toward us, such as Owner, Ruler, and Benefactor, listed in the next item.
+- **rational creatures** (item 5): Baxter's "reasonable creatures," meaning beings that reason.
+- **do not set the bar too high** (item 5): Baxter's "I screw thee not too high," meaning "I do not demand too much of you."
+- **title** (item 7): kept in its legal sense of "right or claim."
+- **pleasure-seekers** (item 9): Baxter's "sensualists," meaning those who live for the pleasures of the senses.
+- **Holy Ghost / Spirit** and other fixed terms are discussed in the next file.
+- **Scripture:** none quoted in this section.

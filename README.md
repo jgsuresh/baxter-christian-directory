@@ -26,7 +26,7 @@ included. Don't edit them; fixes and annotations belong in `modernized/`.
 
 ## Status
 
-In progress. Part 1: Introduction drafted (`modernized/part1-ethics/00-introduction.md`). See `modernized/samples/` for the style rounds.
+In progress. Part 1: Introduction and Chapter 1, Part 1 through the presuppositions list drafted (`modernized/part1-ethics/`). See `modernized/samples/` for the style rounds.
 
 ## Licensing
 
