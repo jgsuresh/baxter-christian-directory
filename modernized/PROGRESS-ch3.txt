@@ -40,3 +40,17 @@ verified: modernized/part1-ethics/ch03-09-p10-directions-23-38-extremes-and-excu
 verified: modernized/part1-ethics/ch03-09-p9-temptations-15-22-small-sins-and-good-ends.md
 verified: modernized/part1-ethics/ch03-09-p8-temptations-8-14-and-their-directions.md
 verified: modernized/part1-ethics/ch03-09-p11-directions-39-48-and-temptations-to-neglect-duty.md
+verified: modernized/part1-ethics/ch03-09-p13-temptations-in-duty-iv-to-xx.md
+verified: modernized/part1-ethics/ch03-10-p5-cases-of-doubt-sin-annexed-to-duty-and-five-rules.md
+verified: modernized/part1-ethics/ch03-10-p6-rules-for-weighing-doubtful-sins.md
+verified: modernized/part1-ethics/ch03-09-p12-temptations-7-14-and-temptations-that-frustrate-duty.md
+verified: modernized/part1-ethics/ch03-10-p3-directions-16-25-prefer-prescribed-work-redeem-time.md
+verified: modernized/part1-ethics/ch03-10-p2-directions-4-15-prudence-order-of-good-works.md
+verified: modernized/part1-ethics/ch03-10-p4-directions-26-27-reward-from-god-and-the-erring-conscience.md
+verified: modernized/part1-ethics/ch03-11-p1-the-nature-of-love-to-god.md
+verified: modernized/part1-ethics/ch03-11-p3-directions-2-4-fitness-nearness-and-graces-serving-love.md
+verified: modernized/part1-ethics/ch03-11-p4-directions-5-7-love-of-god-and-the-creatures-vanity.md
+verified: modernized/part1-ethics/ch03-11-p5-god-lovable-in-nature-and-in-grace.md
+verified: modernized/part1-ethics/ch03-10-p1-serving-christ-and-doing-good-directions-1-3.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch03-11-p6-love-god-in-his-covenant-his-saints-and-by-faith.md
+verified: modernized/part1-ethics/ch03-11-p2-kinds-of-love-its-reasons-and-direction-1-the-ends-of-our-making.md
