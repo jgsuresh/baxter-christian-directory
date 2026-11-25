@@ -26,3 +26,17 @@ verified: modernized/part1-ethics/ch03-03-p1-believe-in-the-holy-spirit.md
 verified: modernized/part1-ethics/ch03-07-p1-learning-of-christ-our-teacher.md
 verified: modernized/part1-ethics/ch03-08-p2-diseases-of-the-will-and-the-first-entrance-of-sin.md
 verified: modernized/part1-ethics/ch03-07-p2-christs-example-and-the-school-of-christ.md
+verified: modernized/part1-ethics/ch03-08-p3-the-evil-of-sin-in-itself.md
+verified: modernized/part1-ethics/ch03-08-p5-sins-malignity-and-twenty-directions-for-the-cure.md
+verified: modernized/part1-ethics/ch03-09-p2-the-tempters-ends-grounds-and-auxiliaries.md
+verified: modernized/part1-ethics/ch03-08-p4-aggravations-of-sin-and-how-to-hate-it.md
+verified: modernized/part1-ethics/ch03-09-p4-devils-methods-christs-methods-and-temptations-by-age.md
+verified: modernized/part1-ethics/ch03-09-p3-satans-instruments-and-his-war-on-christs-forces.md
+verified: modernized/part1-ethics/ch03-09-p1-war-against-flesh-world-devil-the-two-armies.md
+verified: modernized/part1-ethics/ch03-09-p5-temptations-suited-to-temper-estate-work-and-company.md
+verified: modernized/part1-ethics/ch03-09-p6-tempters-baits-and-his-method-of-applying-them.md
+verified: modernized/part1-ethics/ch03-09-p7-temptations-4-7-and-directions-3-7-against-snares.md
+verified: modernized/part1-ethics/ch03-09-p10-directions-23-38-extremes-and-excuses.md
+verified: modernized/part1-ethics/ch03-09-p9-temptations-15-22-small-sins-and-good-ends.md
+verified: modernized/part1-ethics/ch03-09-p8-temptations-8-14-and-their-directions.md
+verified: modernized/part1-ethics/ch03-09-p11-directions-39-48-and-temptations-to-neglect-duty.md

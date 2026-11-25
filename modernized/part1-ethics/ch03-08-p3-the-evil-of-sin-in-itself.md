@@ -17,7 +17,7 @@ When you have found out where it is, and what it consists in, find out the malig
 
 2. It is a denial or contempt of the authority, or governing power, of God: as if we said, You shall not be our Governor in this.
 
-3. It is a usurping to ourselves of the sovereign power of governing ourselves, in that act: for when we refuse God's government, we set up ourselves in his place; and so make gods of ourselves as to ourselves, as if we were self-sufficient, independent, and had a right to this.
+3. It is a usurping the sovereign power to ourselves of governing ourselves, in that act: for when we refuse God's government, we set up ourselves in his place; and so make gods of ourselves as to ourselves, as if we were self-sufficient, independent, and had a right to this.
 
 4. It is a denying or contempt of the wisdom of God, as if he had unwisely made us a law which is unfit to rule us.
 
@@ -51,39 +51,39 @@ When you have found out where it is, and what it consists in, find out the malig
 
 19. It is a contradicting, fighting against, and in that act winning out against the sanctifying office and work of the Holy Spirit, who moves us against sin, and to obedience.
 
-20. It is a contempt of holiness, and a defacing, in that measure, of the image of God upon the soul, or a rejecting of it: a vilifying of all those graces which are contrary to the sin.
+20. It is a contempt of holiness, and a defacing, in that measure, the image of God upon the soul, or a rejecting it: a vilifying of all those graces which are contrary to the sin.
 
-21. It is a pleasing of the devil, the enemy of God and of us, and an obeying of him before God.
+21. It is a pleasing of the devil, the enemy of God and us, and an obeying him before God.
 
 22. It is the fault of a rational creature, who had reason given him to do better.
 
 23. It is all willingly done and chosen by a free agent, who could not be forced into it. [101]
 
-24. It is a robbing of God of the honor and pleasure which he should have had in our obedience; and of the glory which we should bring him before the world.
+24. It is a robbing God of the honor and pleasure which he should have had in our obedience; and the glory which we should bring him before the world.
 
 25. It is a contempt of the omnipresence and omniscience of God, when we will sin against him before his face, when he stands over us, and sees all that we do.
 
-26. It is a contempt of the greatness and almightiness of God, that we dare sin against him who is so great, and able to take vengeance on us.
+26. It is a contempt of the greatness and almightiness of God, that we dare sin against him who is so great, and able to be avenged on us.
 
-27. It is a wrong to the mercifulness of God, when we go out of the way of mercy, and put him to use the way of justice and severity, who takes no delight in the death of sinners, but rather that they obey, repent, and live.
+27. It is a wrong to the mercifulness of God, when we go out of the way of mercy, and put him to use the way of justice and severity, who does not delight in the death of sinners, but rather that they obey, repent, and live.
 
 28. It is a contempt of the attractive love of God, who should be the end, and happiness, and pleasure of the soul. As if all that love and goodness of God were not enough to draw or keep the heart to him, and to satisfy us and make us happy; or, he were not fit to be our delight. And it shows the lack of love to God; for if we loved him rightly we would willingly obey him.
 
-29. It is a setting up of the base creature before the Creator, and dung before heaven, as if it were more worthy of our love and choice, and fitter to be our delight; and the pleasure of sin were better for us than the glory of heaven.
+29. It is a setting up the base creature before the Creator, and dung before heaven, as if it were more worthy of our love and choice, and fitter to be our delight; and the pleasure of sin were better for us than the glory of heaven.
 
-30. In all which it appears that it is a practical atheism, in its degree; a taking down of God, or denying him to be God: and a practical idolatry, setting up ourselves and other creatures in his place.
+30. In all which it appears that it is a practical atheism, in its degree; a taking down God, or denying him to be God: and a practical idolatry, setting up ourselves and other creatures in his place.
 
-31. It is a contempt of all the means of grace, which all serve to bring us to obedience, and keep us or call us from our sins: prayer, sacraments, etc.
+31. It is a contempt of all the means of grace, which are all to bring us to obedience, and keep us or call us from our sins: prayer, sacraments, etc.
 
-32. It is a contempt of the love and labors of the ministers of Christ; a disobeying of them, grieving them, and frustrating their hopes and the labors of their lives.
+32. It is a contempt of the love and labors of the ministers of Christ; a disobeying them, grieving them, and frustrating their hopes and the labors of their lives.
 
 33. It is a debasing of reason, the superior faculty of the soul, and a setting up of the flesh or inferior faculties, like setting dogs to govern men, or the horse to rule the rider.
 
-34. It is a blinding of reason, and a misusing of the noblest faculties of the soul, and frustrating them of the use and ends which they were made for: and so it is the disorder, monstrosity, sickness, or death of the soul. [102]
+34. It is a blinding of reason, and a misusing the noblest faculties of the soul, and frustrating them of the use and ends which they were made for: and so it is the disorder, monstrosity, sickness, or death of the soul. [102]
 
 35. It is, in its measure, the image of the devil upon the soul, who is the father of sin: and therefore the most hateful deformity of the soul; and this where the Holy Spirit should dwell, and the image and delight of God should be.
 
-36. It is the moral destruction not only of the soul, but of the whole creation, so far as the creatures are appointed as the means to bring or keep us to God: for the means, as a means, is destroyed when it is not used for its end. A ship is useless if no one is carried in it. A watch, as such, is useless when it is not used to show the hour of the day. All the world, as it is the book that should teach us the will of God, is set aside when that use is set aside. Indeed, sin uses against God the creature which should have been used for him.
+36. It is the moral destruction not only of the soul, but of the whole creation, so far as the creatures are appointed as the means to bring or keep us to God: for the means, as a means, is destroyed when it is not used to its end. A ship is useless if no one is carried in it. A watch, as such, is useless, when not used to show the hour of the day. All the world, as it is the book that should teach us the will of God, is set aside when that use is set aside. Indeed, sin uses against God the creature which should have been used for him.
 
 37. It is a contradicting of our own confessions and professions; a wronging of our consciences; a violation of our covenants and self-obligations to God.
 
@@ -93,7 +93,7 @@ When you have found out where it is, and what it consists in, find out the malig
 
 39. It is a making of a breach in the harmony and order of the world: as the dislocation or deformity of a particular member is the trouble and deformity of all the body, because the beauty and welfare of the whole contains the beauty, proportion, and welfare of all the parts. And as the dislocation or breaking of one part in a watch or clock is against the use of the whole machine; so every man being a part of the kingdom of God, by sin makes a breach in the order of the whole; and also gives a bad example to other parts, and makes himself unserviceable to the body; and dishonors the whole body with the blot of rebellion; and lets in judgment on the world; and kindles a consuming fire in the place where he lives; and is cruel and injurious to others.
 
-40. Sin is not only a preferring of the body before the soul, but it is also an unmercifulness or cruelty against ourselves, both soul and body, and so is contrary to the true use of the indelible principle of self-love; for it is a wounding and abusing of the soul and defiling of the body in this life, and casting both on the wrath of God, and into the flames of hell hereafter, or a dangerous venturing of them into the way of endless damnation and despair, and a contempt of those unbearable torments. All these parts of malignity and poison are intrinsic to sin, and found in the very nature of it.
+40. Sin is not only a preferring of the body before the soul, but it is also an unmercifulness or cruelty against ourselves, both soul and body, and so is contrary to the true use of the indelible principle of self-love; for it is a wounding and abusing the soul and defiling the body in this life, and casting both on the wrath of God, and into the flames of hell hereafter, or a dangerous venturing them into the way of endless damnation and despair, and a contempt of those unbearable torments. All these parts of malignity and poison are intrinsic to sin, and found in the very nature of it.
 
 The common aggravations of sin being written of by many, and easily gathered from what is said of the nature of it, I will briefly name only a few.
 
@@ -122,7 +122,8 @@ Reproduced as in the source (English modernized). A draft English translation fo
 - **Scripture:** no verse is quoted with a reference in this section, so nothing was fetched from the NET. The NET wording changes no sense Baxter relies on here. Unmarked allusions, kept in Baxter's wording and not cited in the text: item 18, "to destroy the works of the devil" (compare 1 John 3:8; not in Baxter's text); item 27, "delights not in the death of sinners, but rather that they obey, repent, and live" (compare Ezekiel 33:11; not in Baxter's text); item 35, "the father of sin," echoing the devil as father in John 8:44 (not in Baxter's text). These are suggested parallels only and were not checked against the NET.
 - **Direction label:** Baxter prints "Direct. II. 2." (apparently the second Direction under his second main head). We kept "II. 2." rather than guess how it fits the larger scheme.
 - **Heading and run-in text:** in the source, the Direction's heading sentence runs directly into the first paragraph after a dash. We set the heading sentence in bold and began the paragraph after it.
-- **Word swaps** (Baxter's word, then ours): labour, labor; christians, Christians; intrinsical, intrinsic; odiousness, hatefulness; unmeet, unfit; naughtiness, wickedness; propriety (ownership, in the sense of property or possession; items 9 and 10), ownership; as we list, as we please; allured, drew; veracity, truthfulness; obligeth, obliges (and similar -eth verbs, plain verbs); felicity, happiness; sordid, base; Holy Ghost, Holy Spirit; prevailing against, winning out against; honour, honor; comeliness, beauty; engine (a machine, of a watch or clock), machine; ill example, bad example; insufferable, unbearable; cast by, set aside; "be avenged on us," take vengeance on us; "is not to be believed," kept. "Be carried in it" in item 36 is Baxter's subjunctive, "if no one is carried in it."
+- **Word swaps** (Baxter's word, then ours): labour, labor; christians, Christians; intrinsical, intrinsic; odiousness, hatefulness; unmeet, unfit; naughtiness, wickedness; propriety (ownership, in the sense of property or possession; items 9 and 10), ownership; as we list, as we please; allured, drew; veracity, truthfulness; obligeth, obliges (and similar -eth verbs, plain verbs); felicity, happiness; sordid, base; Holy Ghost, Holy Spirit; prevailing against, winning out against; honour, honor; comeliness, beauty; engine (a machine, of a watch or clock), machine; ill example, bad example; insufferable, unbearable; cast by, set aside; "is not to be believed," kept. "Be carried in it" in item 36 is Baxter's subjunctive, "if no one is carried in it."
+- **Sentence shape:** in several items (3, 20, 21, 24, 29, 30, 32, 34, 36, 40) Baxter's "a ...ing" nouns take a direct object ("a usurping the sovereign power," "a robbing God of"); we kept his construction and did not add "of."
 - **Items 17 and 18:** "men and devils" is Baxter's parenthesis, kept. "Contrary to his bloodshed, authority, and healing work" is kept as printed.
 - **Terms kept:** malignity (the active ill-will or poison of sin, not merely badness); mortification (putting sin to death); aggravations (what makes a sin worse); means of grace; practical atheism and practical idolatry (atheism and idolatry shown in conduct, not in stated belief); the "indelible principle of self-love" (Baxter's phrase for an unremovable, natural self-regard).
 - **Item 33:** "inferior faculties" and "superior faculty" are Baxter's older psychology: reason is the higher power of the soul, and the appetites and senses are lower powers.
