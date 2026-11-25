@@ -12,3 +12,17 @@ written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-et
 written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch03-15-p3-praise-in-speech-and-directions-1-4-for-glorifying-god-in-life.md
 written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch03-15-p1-glorifying-god-with-the-heart-and-the-tongue.md
 written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch03-15-p4-directions-5-12-glorify-god-and-grand-directions-16-17.md
+verified: modernized/part1-ethics/ch03-01-p1-grand-direction-01-a-well-grounded-faith.md
+verified: modernized/part1-ethics/ch03-05-p1-god-is-your-owner-resign-yourselves.md
+verified: modernized/part1-ethics/ch03-06-p1-god-our-king-and-full-subjection.md
+verified: modernized/part1-ethics/ch03-03-p2-the-spirits-work-and-obeying-the-spirit.md
+verified: modernized/part1-ethics/ch03-04-p1-grand-direction-04-knowledge-of-god.md
+verified: modernized/part1-ethics/ch03-02-p1-grand-direction-2-using-christ-by-faith.md
+verified: modernized/part1-ethics/ch03-06-p3-directions-8-12-temptation-pleasure-and-controversy.md
+verified: modernized/part1-ethics/ch03-06-p2-directions-9-10-and-special-directions-1-7-for-obedience.md
+verified: modernized/part1-ethics/ch03-02-p2-faith-looks-to-christ-in-drawing-near-to-god.md
+verified: modernized/part1-ethics/ch03-08-p1-cure-of-the-soul-and-diseases-of-the-understanding.md
+verified: modernized/part1-ethics/ch03-03-p1-believe-in-the-holy-spirit.md
+verified: modernized/part1-ethics/ch03-07-p1-learning-of-christ-our-teacher.md
+verified: modernized/part1-ethics/ch03-08-p2-diseases-of-the-will-and-the-first-entrance-of-sin.md
+verified: modernized/part1-ethics/ch03-07-p2-christs-example-and-the-school-of-christ.md
