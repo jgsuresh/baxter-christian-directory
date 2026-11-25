@@ -54,3 +54,16 @@ verified: modernized/part1-ethics/ch03-11-p5-god-lovable-in-nature-and-in-grace.
 verified: modernized/part1-ethics/ch03-10-p1-serving-christ-and-doing-good-directions-1-3.md
 verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch03-11-p6-love-god-in-his-covenant-his-saints-and-by-faith.md
 verified: modernized/part1-ethics/ch03-11-p2-kinds-of-love-its-reasons-and-direction-1-the-ends-of-our-making.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch03-13-p2-delight-in-god-directions-5-9.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch03-11-p7-directions-12-16-heaven-assurance-and-friendly-love.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch03-13-p1-grand-direction-13-delighting-in-god.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch03-14-p1-thankfulness-to-god-the-benefactor.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch03-13-p3-directions-10-20-holy-delight-and-the-sinners-excuse.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch03-12-p1-trust-god-nature-counterfeits-and-first-directions.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch03-12-p2-directions-6-15-trusting-god-and-submission.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch03-14-p2-directions-7-18-thankfulness-for-mercies.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch03-15-p2-praise-of-god-its-excellence-and-helps-to-praise.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch03-15-p1-glorifying-god-with-the-heart-and-the-tongue.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch03-11-p8-directions-17-18-delight-in-love-and-give-god-your-heart.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch03-15-p3-praise-in-speech-and-directions-1-4-for-glorifying-god-in-life.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch03-15-p4-directions-5-12-glorify-god-and-grand-directions-16-17.md
