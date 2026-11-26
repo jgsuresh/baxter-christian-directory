@@ -26,7 +26,7 @@ included. Don't edit them; fixes and annotations belong in `modernized/`.
 
 ## Status
 
-In progress. Part 1: Introduction and Chapter 1, Part 1 (all 20 Directions) and Chapter 1, Part 2 (all Temptations) drafted, so Chapter 1 is complete; Chapter 2 (all 20 Directions) drafted, so Chapter 2 is complete; Chapter 3 (all 17 Grand Directions) drafted, so Chapter 3 is complete; Chapter 4 (all seven sections of subordinate directions, against unbelief, hardness of heart, hypocrisy, man-pleasing, pride, covetousness, and sensuality) drafted, so Chapter 4 is complete; Chapter 5 (directions for redeeming time) drafted, so Chapter 5 is complete (`modernized/part1-ethics/`). See `modernized/samples/` for the style rounds.
+In progress. Part 1: Introduction and Chapter 1, Part 1 (all 20 Directions) and Chapter 1, Part 2 (all Temptations) drafted, so Chapter 1 is complete; Chapter 2 (all 20 Directions) drafted, so Chapter 2 is complete; Chapter 3 (all 17 Grand Directions) drafted, so Chapter 3 is complete; Chapter 4 (all seven sections of subordinate directions, against unbelief, hardness of heart, hypocrisy, man-pleasing, pride, covetousness, and sensuality) drafted, so Chapter 4 is complete; Chapter 5 (directions for redeeming time) drafted, so Chapter 5 is complete; Chapter 6 (directions for the government of the thoughts) drafted, so Chapter 6 is complete (`modernized/part1-ethics/`). See `modernized/samples/` for the style rounds.
 
 ## Licensing
 

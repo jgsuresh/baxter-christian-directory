@@ -17,7 +17,9 @@ We are to climb upwards, and not to descend downwards: and therefore we begin at
 
 But indeed where some of these are done already, they may be assumed, and we may proceed to that which is yet to be done. For instance, if you know what is sin and duty, but do not do it, your meditation must be, not to make you know what you did not know, but first to consider well what you know, and set the powerful truth before you; and then labor by this to bring your wills to a fixed resolution of obedience. But if it is a truth whose principal use is on the will and affections (as to draw up the heart to the love of God, by meditating on his attractive excellencies), then the most pains must be taken there. On which see Chapter 3, Direction 11.
 
-**Direction 10. Turn your thoughts often into soliloquies; methodically and earnestly preaching to your own hearts, as you would do on that subject to others if it were to save their souls.** [308]
+**Direction 10. Turn your thoughts often into soliloquies; methodically and earnestly preaching to your own hearts, as you would do on that subject to others if it were to save their souls.**
+
+[308]
 
 As this will keep you in order, from rambling and running off, and will also supply you with continual matter (for method is a wonderful help both to invention, memory, and delight), so it will bring things soonest to your affections: and earnest pleading of convincing reasons with our own hearts is a powerful way to make the fire burn, and to kindle desire, fear, love, hatred, repentance, shame, sorrow, joy, resolution, or any good effect. Convictions, reproaches, remonstrances, rebukes, and self-persuasions may be very powerful; whereas a dull way of bare thinking is only like a dull way of preaching, without any lively application, which stirs the hearers little. Learn purposely from the liveliest books you read, and from the best and liveliest preachers you hear, to preach to your hearts, and use it in an orderly way, and you will find it a most powerful way of meditating.
 

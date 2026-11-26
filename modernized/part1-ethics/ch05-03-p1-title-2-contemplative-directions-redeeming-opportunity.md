@@ -23,7 +23,9 @@ When the season is past, the work cannot be done. If you do not sow in the time 
 
 How easily may you swim with the tide; and sail with the wind; and form the iron if you hammer it while it is hot! How easily may many a disease be cured, if it is taken in time, which afterwards is incurable! How easily may you bend a tender twig, and pluck up a plant, which will neither be plucked up nor bent when it is grown up to be a tree! When you complain of difficulties in religion, consider whether your loss of the fittest season, and acquainting yourselves no sooner with God, is not the cause?
 
-**Direction 4. Consider that your work out of season is not so good or acceptable, even if you could do it.** [285]
+**Direction 4. Consider that your work out of season is not so good or acceptable, even if you could do it.**
+
+[285]
 
 "...everything fit beautifully in its appropriate time" (Ecclesiastes 3:11). To speak a "word in season to the weary" is the skill of the faithful messengers of peace (Isaiah 50:4). When out of season good may be turned into evil. Who will thank you for giving medicine, or food, or clothing to the dead? or pitying the poor when it is too late? In time all this may be accepted.
 
@@ -31,7 +33,9 @@ How easily may you swim with the tide; and sail with the wind; and form the iron
 
 Lose this time, and for all you know you lose all. Or if you have time, it may be cursed with barrenness, and never again may fruit grow on it. Preachers may be taken from you; and gracious company may be taken from you: helps and means may be turned into hindrances, and opposition, and strong temptations: and then you will find what it was to neglect the season! Or if you have the continuance of all helps and means, how do you know that God will step in by his grace, and bless them to you, and move your hearts? He may resolve that if you resist him now, his Spirit shall strive with you no more. If while it is called today you will harden your hearts, he may resolve to leave you to the hardness of Pharaoh, and to get himself a name upon you, and use you as vessels of wrath, prepared by your neglect and obstinacy for destruction.
 
-**Direction 6. Think how all the creatures keep their proper seasons, in the service which God has appointed them for you.** [286]
+**Direction 6. Think how all the creatures keep their proper seasons, in the service which God has appointed them for you.**
+
+[286]
 
 The sun rises and sets in its season, and keeps its daily and annual course, and does not miss a minute. So do the celestial motions. You have day and night, and seedtime and harvest, summer and winter, spring and fall, and all exactly in their seasons. "Even the stork knows when it is time to move on. The turtledove, swallow, and crane recognize the normal times for their migration. But my people pay no attention to what I, the Lord, require of them" (Jeremiah 8:7). Shall only man neglect his season?
 
@@ -47,7 +51,9 @@ And how much more should we be so in doing good! Seducers will take the opportun
 
 He prevails much by taking the time; when he sees you disarmed, forgetting God, in secure prosperity, fittest to listen to his temptations. The same temptations out of season might not prevail. And will you let your enemy outdo you?
 
-**Direction 10. Consider how earnest you are with God in your necessities and distress, not only to relieve and help you, but to do it speedily and in season.** [288]
+**Direction 10. Consider how earnest you are with God in your necessities and distress, not only to relieve and help you, but to do it speedily and in season.**
+
+[288]
 
 You would rather have him come before the season than let it pass. You are impatient till deliverance comes, and can hardly wait for the time till it is ripe. When you are in pain and sickness, you would be delivered speedily: you are ready to cry, "How long, Lord, how long?" [289] And as David, "...it is time ... the appointed time has come" (Psalm 102:13). "O my God, do not delay" (Psalm 40:17). It would not satisfy you if God should say, I will ease you of your pain the next year. Why then should you neglect the time of duty, and use so many delays with God? He gives you all your mercies in their season; why then do you not in season give yourselves up to his love and service? when you have his promise that "in due time we will reap, if we do not give up" (Galatians 6:9).
 
