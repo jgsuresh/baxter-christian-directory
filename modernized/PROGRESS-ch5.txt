@@ -1,0 +1,10 @@
+written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-02-p1-title-1-directions-1-3-the-great-work-of-time.md
+written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-01-p1-the-nature-of-redeeming-time.md
+written: modernized/part1-ethics/ch05-03-p1-title-2-contemplative-directions-redeeming-opportunity.md
+written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-02-p3-directions-12-20-what-time-is-worth.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-02-p1-title-1-directions-1-3-the-great-work-of-time.md
+written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-02-p2-title-1-directions-4-11-review-swiftness-shortness-of-time.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-03-p1-title-2-contemplative-directions-redeeming-opportunity.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-01-p1-the-nature-of-redeeming-time.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-02-p2-title-1-directions-4-11-review-swiftness-shortness-of-time.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-02-p3-directions-12-20-what-time-is-worth.md
