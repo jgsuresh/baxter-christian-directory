@@ -8,3 +8,13 @@ verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-e
 verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-01-p1-the-nature-of-redeeming-time.md
 verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-02-p2-title-1-directions-4-11-review-swiftness-shortness-of-time.md
 verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-02-p3-directions-12-20-what-time-is-worth.md
+written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-06-p1-title-5-on-whom-redeeming-time-chiefly-lies.md
+written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-04-p1-title-3-practical-directions-1-6.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-06-p1-title-5-on-whom-redeeming-time-chiefly-lies.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-04-p1-title-3-practical-directions-1-6.md
+written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-04-p2-title-3-directions-7-11-little-things-and-time-thieves.md
+written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-05-p2-title-4-thieves-4-12-pomp-feasting-talk-thoughts.md
+written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-05-p1-title-4-thieves-sloth-sleep-adorning.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-04-p2-title-3-directions-7-11-little-things-and-time-thieves.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-05-p2-title-4-thieves-4-12-pomp-feasting-talk-thoughts.md
+verified: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch05-05-p1-title-4-thieves-sloth-sleep-adorning.md
