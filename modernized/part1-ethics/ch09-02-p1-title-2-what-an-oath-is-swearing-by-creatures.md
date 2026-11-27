@@ -80,7 +80,7 @@ Reproduced as in the source, with the Scripture references converted to modern f
 - **binding and able to be pleaded against you:** Baxter's "obligatory and pleadable against you." **indeed:** his "yea."
 - **scandal / scandalously:** in Baxter's sense, giving others occasion to stumble or sin, not only causing outrage. Kept.
 - **terminates / medium** (section II): Baxter's terms. Worship "terminated" in something has that thing as its final object; a "medium" is a means or channel through which worship passes to God.
-- **Julian:** the Roman emperor Julian, called the Apostate, who wrote an oration in praise of the sun (Helios). Baxter's example kept as he gives it.
+- **Julian:** probably the Roman emperor Julian, called the Apostate; the oration Baxter mentions is probably his oration in praise of the sun (Helios), but we have not confirmed it. Baxter's example kept as he gives it.
 - **we are accustomed to:** Baxter's "we use to." **slander:** his "calumny." **etc.:** his "&c."
 - **"So help me God, and the contents of this book":** the form of the English oath on the Bible as Baxter reports it.
 - ***Answer.* (the Bible-kissing question):** Baxter's label here is "_Resp._" (Latin *responsio*, "answer"), not his usual "Answ."; rendered *Answer.* ***Proved.*** is his label "_Proved_" for the proof that follows.
@@ -94,7 +94,7 @@ Reproduced as in the source, with the Scripture references converted to modern f
 - ***non apparere* and *non esse*:** "not appearing" and "not being." Baxter applies the legal maxim that what does not appear is treated as what does not exist: since God's laws are complete, a law not found in Scripture is taken not to exist.
 - **made known:** Baxter's "notified" (made known, published).
 - **Paræus; Pererius; Grotius:** commentators on Genesis that Baxter cites (Paræus probably David Pareus, the Reformed commentator at Heidelberg; Pererius probably Benedict Pereira, the Jesuit commentator on Genesis; Grotius is Hugo Grotius). We have not checked the passages cited. Baxter's citations "Paræus, ibid.," "Vid. Perer. in Gen. xiv. and xxiv.," and "Vid. Perer. ubi sup. in Gen. xxiv. 2" are rendered "Paræus, in the same place," "See Pererius on Genesis 14 and 24," and "See Pererius, in the place cited above, on Genesis 24:2."
-- **the Palatinate:** a German territory (with Heidelberg its university town) where Pareus taught.
+- **the Palatinate:** a German territory (with Heidelberg its university town), probably named because Pareus taught there; we have not confirmed this.
 - ***Hodie nos juramus, digitis tribus dextræ sublatis, invocantes vindicem S. Trinitatem*:** (English: Today we swear with three fingers of the right hand raised, calling on the Holy Trinity as avenger.)
 - **The English annotations:** probably the *Annotations upon all the Books of the Old and New Testament* produced by a group of English divines in the 1640s and 1650s (often called the Westminster or English Annotations); not confirmed.
 - **Josephus (cited by Grotius):** Baxter's report of what Josephus says, via Grotius; we have not checked it. **as Grotius and others say:** "say" added to complete the clause (Baxter: "as Grotius and others").

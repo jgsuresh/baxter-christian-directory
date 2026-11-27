@@ -51,7 +51,6 @@ None in this section.
 - **logomachy; orthotomy:** words formed from the Greek of these verses, "word-fighting" (v. 14) and "cutting straight" (v. 15). Baxter glosses the second himself ("right dividing the word of truth"). Kept.
 - **Hebrews 5:14 (corrected reference):** the 1846 text prints "Heb. v. 15," but Hebrews 5 has only 14 verses, and the words are from 5:14. We corrected it. Baxter paraphrases; the NET reads: "whose perceptions are trained by practice to discern both good and evil." His "well exercised senses" is the King James "senses exercised."
 - **Unmarked allusions** (kept in Baxter's wording): "confusion and all evil works" recalls James 3:16; "slothful servant" recalls Matthew 25:26.
-- **when inconsistent** (first paragraph): left as written; Baxter seems to mean pleasing men when their demands contradict one another.
 - **Ecclesiastical Cases** (Objection 4): left as printed. Probably the cases of conscience on church matters in a later part of this book; we have not checked the cross-reference.
 - **abate:** kept, in the sense "lessen."
 - **conceited** (Answer to Objection 4): kept. In Baxter's day it could mean "fanciful" or "self-opinionated," so "conceited, orthodox strife" is strife that only fancies itself orthodox, as well as proud strife.

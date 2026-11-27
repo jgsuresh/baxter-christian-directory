@@ -69,5 +69,5 @@ Reproduced as in the source (English modernized). A draft English translation fo
 - **"or rather that he forbids it to you for your good, that you may escape the hurt."** (Question 7): printed with a period, though it continues a question; kept.
 - **"as the guilty criminal thinks on the assizes":** Baxter's "thinketh on" means thinks about; kept.
 - **Plato's supper; the confessor's story:** the anecdotes are Baxter's; we have not traced their sources. "Confessor" here is a priest who hears confessions.
-- **Note 445:** "opprobio" is printed for *opprobrio* (reproach), probably a misprint; kept as printed. "Ingam" is the Latin accusative of "Inga," the Inca king. Acosta is the Jesuit writer Baxter cites elsewhere on the native peoples of the Americas; we have not checked which of his works "l. 3. c. 21" refers to.
+- **Note 445:** "opprobio" is printed for *opprobrio* (reproach), probably a misprint; kept as printed. "Ingam" is the Latin accusative of "Inga," the Inca king. Acosta is probably José de Acosta, the Jesuit writer on the native peoples of the Americas; we have not checked which of his works "l. 3. c. 21" refers to.
 - **Note 446:** the saying attributed to Socrates is Baxter's report; not traced.

@@ -67,7 +67,7 @@ Reproduced as in the source (English modernized). A draft English translation fo
 
 [565] Pliny says that as pearls, though they lie in the bottom of the sea, are yet much nearer akin to heaven, as their splendor and excellence shows; so a godly and generous soul has more dependence on heaven, where it comes from, than on earth where it abides. A good saying for a heathen.
 
-[566] Socrates cum fuisset a quodam calce percussus, admirantibus illius tolerantiam dixit, Quid si me asinus calce impetisset? Num illi diem dixissem? (When Socrates had been kicked by someone, he said to those who marveled at his patience, What if an ass had kicked me? Would I have taken it to court?)
+[566] Socrates cum fuisset a quodam calce percussus, admirantibus illius tolerantiam dixit, Quid si me asinus calce impetisset? Num illi diem dixissem? (English: When Socrates had been kicked by someone, he said to those who marveled at his patience, What if an ass had kicked me? Would I have taken it to court?)
 
 ## Translator's notes
 
@@ -88,7 +88,7 @@ Reproduced as in the source (English modernized). A draft English translation fo
 - **papist; sectarian:** papist is Baxter's word for a Roman Catholic; sectaries were members of the separatist sects of his day. His remarks on them are his own polemic, kept as written (here, notably, he defends holy members of both from scorn).
 - **"Thus papists, and thus—the factious ones":** the source has a dash here ("thus--the factious ones"); we keep it.
 - **The book of Homilies (Direction 2 and note 562):** the Church of England's official books of sermons. We have not identified which homily Baxter's reference "Homil. 10 part 2" means, and "tom. 9" (tome or volume 9) is reproduced as printed. The quotation's "third sort ... scorners" seems to refer to the three kinds of sinner in Psalm 1:1 (the "he" who "calls" them is presumably the psalmist, or an author the homily cites); we have not confirmed this.
-- **Robert Bolton; *Discourse of Happiness* (note 564):** Robert Bolton was a Puritan preacher of the early seventeenth century; the work is probably his *Discourse about the State of True Happiness*. We have not checked the quotation against it. **Bishop Downam, Bishop Abbot:** the source gives only surnames; we have not identified them with certainty.
+- **Robert Bolton; *Discourse of Happiness* (note 564):** Robert Bolton was probably the Puritan preacher of that name of the early seventeenth century (we have not confirmed this); the work is probably his *Discourse about the State of True Happiness*. We have not checked the quotation against it. **Bishop Downam, Bishop Abbot:** the source gives only surnames; we have not identified them with certainty.
 - **Baxter's own books:** *The Vain Religion of the Formal Hypocrite* (also cited as *Formal Hypocrite*), *Now or Never*, and *A Saint or a Brute*, as Baxter names them. The page numbers are his.
 - **Chrysostom's saying:** we have not located the source; Baxter gives none.
 - **Note 566 does not match its marker:** the marker follows the Chrysostom saying, but the note tells a story about Socrates bearing a kick with patience. It fits better with request 2 ("Do not be discouraged by scorners"). We keep the marker where the source has it. *Diem dicere* is a Roman legal phrase for summoning someone to trial, rendered loosely as "taken it to court."

@@ -89,4 +89,4 @@ Reproduced as in the source (English modernized). A draft English translation fo
 - **a lie that hurts no man, but is helpful** (point 14): Baxter's "officious," in the older sense of the "officious lie" (Latin *mendacium officiosum*), a lie told to help or oblige someone. The modern sense of "officious" (meddlesome) would mislead. His aside "(as the Jesuits)" is his polemic, kept as written.
 - **all good Christians should not indulge the smallest sin** (point 15): left as written; Baxter means that no good Christian should indulge even the smallest sin. **named above:** his "aforenamed."
 - **casuist** (last paragraph): kept; one who resolves cases of conscience. **be put to trying:** Baxter's "be put on trying."
-- **Reported speech in Direction 9:** the words "I thought it was true" and "I think it is so" is unquoted in the source and left so.
+- **Reported speech in Direction 9:** the words "I thought it was true" and "I think it is so" are unquoted in the source and left so.
