@@ -67,6 +67,15 @@ blockquote { margin: 0.6em 1.5em; }
 .titlepage h1 { margin-top: 25%; page-break-before: avoid; }
 .titlepage p { text-align: center; margin: 0.6em 0; }
 .front p { margin-bottom: 0.8em; }
+ul.toc { list-style-type: none; margin: 0 0 0.8em 0; padding: 0 0 0 1.2em; }
+ul.toc li { margin: 0 0 0.35em 0; }
+.toc-page a { text-decoration: none; }
+p.toc-group { font-weight: bold; margin: 1em 0 0.3em 0; }
+p.toc-note { font-style: italic; margin-bottom: 1.2em; }
+p.tn-link { font-size: 0.85em; font-style: italic; text-align: right; margin-top: 1.2em; }
+p.tn-link a, h3 a { text-decoration: none; }
+.tn { font-size: 0.9em; }
+.tn li { margin-bottom: 0.4em; }
 """
 
 ENT = {"&nbsp;": "&#160;", "&mdash;": "—", "&ndash;": "–", "&hellip;": "…",
@@ -117,8 +126,20 @@ def convert_file(path):
     # Keep Baxter's numbering exactly: stop Markdown from turning "7. ..." into a renumbered list.
     text = re.sub(r"^(\d+)\. ", r"\1\\. ", text, flags=re.M)
 
+    # Translator's notes go to an appendix at the back of the book, not after each section.
+    tsplit = re.search(r"^## Translator's notes\s*$", text, flags=re.M)
+    text, tnotes = (text[:tsplit.start()], text[tsplit.end():]) if tsplit else (text, "")
+
     split = re.search(r"^## Baxter's notes\s*$", text, flags=re.M)
     body, notes = (text[:split.start()], text[split.start():]) if split else (text, "")
+    if not note_lines(notes):
+        notes = ""  # "None in this section." adds nothing for a reader
+    else:
+        # Everything between the heading and the first note is editorial preamble that repeats.
+        notes = re.sub(r"\A(## Baxter's notes\s*\n).*?(?=^\[\d+\](?= |$))", r"\1\n", notes, flags=re.S | re.M)
+        notes = drop_boilerplate(notes)
+    tnotes = drop_boilerplate(tnotes)
+    body = re.sub(r"\n---\s*$", "\n", body.rstrip() + "\n")  # rule that separated the notes
 
     note_nums = set(re.findall(r"^\[(\d+)\](?= |$)", notes, flags=re.M))
     seen = set()
@@ -147,9 +168,64 @@ def convert_file(path):
     label = re.sub(r"^Chapter \d+[,:]?\s*", "", heading).strip() or heading
     if label[:1].islower():
         label = label[0].upper() + label[1:]
-    page_heading = heading
-    out = f"<h2>{html.escape(page_heading)}</h2>\n{body_html}\n{notes_html}"
-    return heading, label, out
+    out = f"<h2>{html.escape(heading)}</h2>\n{body_html}\n{notes_html}"
+    tn_html = md_to_html(tnotes) if tnotes.strip() else ""
+    return heading, label, out, tn_html
+
+
+# Boilerplate that the drafts repeat in many sections (about the draft Latin translations, the NET
+# Bible, and where references come from). "About This Edition" says each of these once, so the book
+# drops a note block that says nothing else, and drops such sentences from blocks that do say more.
+BOILER = [
+    r"(Baxter's notes are |Notes are |Footnotes are |These are )?[Rr]eproduced (exactly |in full )?as (in the source|printed)[^.;]*[.;]",
+    r"The Latin( and Greek)? (is|are) (reproduced|kept|given) (exactly )?as printed[^.]*\.",
+    r"[^.;]*draft (English )?translations?[^.]*?(fine points|Latinist['’]?s? check[^.]*|check[^.]*Latinist[^.]*|Latinist[^.]*)\.",
+    r"[^.;]*(prepared for this project|need[s]? a Latinist)[^.]*\.",
+    r"English (in|inside) (the|a) (notes|footnotes?) is modernized[^.]*\.",
+    r"(Its|Their|The) English (is|has been) modernized[^.]*\.",
+    r"Baxter's (own )?English (in|inside) (the|these|this) (notes?|footnotes?) (is|are) modernized\.",
+    r"Baxter's own footnotes quote Latin authors\.",
+    r"(There is no|No) Latin or Greek[^.]*\.", r"None of these notes contains? Latin or Greek\.",
+    r"\(?[^.()]*Scripture references[^.()]*(modern form|converted)[^.()]*\)?\.?",
+    r"(The Latin is|Latin and Greek are) not modernized[,;] (and )?a draft English translation follows[^.]*\.",
+    r"A draft English translation would follow any Latin or Greek; there is none[^.]*\.",
+]
+SCRIPTURE_BULLET = re.compile(
+    r"- \*\*Scripture translation:\*\*\s*NET Bible®?,?( fetched from labs\.bible\.org)?;?( see [^.]*?NOTICE\.md)?\.?\s*"
+    r"((All|Every|Each)[^.]*fetched from labs\.bible\.org[^.]*\.)?\s*")
+SAFE_SENTENCE = re.compile(r"(?<![\w\"])[A-Z][^.\"():]*(prepared for this project|Latinist)[^.\"():]*\.\s*")
+SAFE_PAREN = re.compile(r"\s*\((draft translations? )?prepared for this project[^()]*\)|;?\s*\(?(the translation is a draft|this draft translation was) prepared for this project[^().]*\)?")
+
+
+_NODOT = r"(?:[^.\"]|\.(?=bible|org|md))*"
+PROVENANCE = re.compile(r"(?<![\w\"])[A-Z(]" + _NODOT + r"(NOTICE\.md|[Ff]etched from labs\.bible\.org)" + _NODOT + r"\.\s*"
+                        r"|(\*\*Scripture translation:\*\*\s*)?[Qq]uoted Scripture in this project is from the NET Bible®?\.\s*")
+
+
+def drop_boilerplate(md):
+    out = []
+    for block in re.split(r"\n(?=- |\n)", md):
+        block = PROVENANCE.sub("", block)
+        if re.fullmatch(r"\s*-?\s*(\*\*Scripture translation:\*\*)?\s*", block):
+            continue
+        b = SCRIPTURE_BULLET.sub("", block) if block.lstrip().startswith("- **Scripture translation:**") else block
+        if b != block and not b.strip():
+            continue
+        if b != block:
+            b = "- " + b.strip() if not b.strip().startswith("-") else b
+        s = b
+        for p in BOILER:
+            s = re.sub(p, "", s)
+        if s != b and not re.sub(r"[-*\s().,;:]", "", s):
+            continue  # nothing but boilerplate
+        if "Latinist" in b or "prepared for this project" in b:
+            b = SAFE_PAREN.sub("", SAFE_SENTENCE.sub("", b))
+        out.append(b)
+    return "\n".join(out)
+
+
+def note_lines(notes):
+    return re.findall(r"^\[\d+\](?= |$)", notes, flags=re.M)
 
 
 def make_cover():
@@ -192,7 +268,7 @@ def front_matter(today):
     about = """<h1>About This Edition</h1>
 <div class="front">
 <p>This is a word-level modernization of Part 1 (Christian Ethics) of Richard Baxter&#8217;s <em>A Christian Directory</em>, made from the Project Gutenberg transcription of the 1846 edition. Old words, spellings, and verb forms are brought up to date; Baxter&#8217;s sentences are not split, merged, or summarized, so his argument and its order are as he wrote it.</p>
-<p>Quoted Scripture is given in the NET Bible. Where the NET wording changes the sense Baxter relies on, the translator&#8217;s notes say so. Baxter&#8217;s own footnotes follow each section under &#8220;Baxter&#8217;s notes&#8221;; his Latin and Greek are kept as printed, followed by draft English translations made for this project. These translations have not yet been checked by a Latinist. The translator&#8217;s notes record word choices, corrected references, and source oddities.</p>
+<p>Quoted Scripture is given in the NET Bible. Where the NET wording changes the sense Baxter relies on, the translator&#8217;s notes at the back of the book say so. Baxter&#8217;s own footnotes follow each section under &#8220;Baxter&#8217;s notes&#8221;; his Latin and Greek are kept as printed, followed by draft English translations made for this project. These translations have not yet been checked by a Latinist. The translator&#8217;s notes, collected at the back of the book, record word choices, corrected references, and source oddities; each section ends with a link to its notes.</p>
 <p>Baxter&#8217;s margin summaries appear as small italic lines beginning &#8220;In the margin.&#8221; His footnote markers are links: select one to see the note.</p>
 <p><strong>Status:</strong> this is a draft. Every section has been drafted and checked against the source, but none has had a final human edit.</p>
 <p><strong>Scripture:</strong> Scripture quotations are from the NET Bible&#174;, copyright &#169; 1996, 2019 by Biblical Studies Press, L.L.C., https://netbible.com. All rights reserved. Quoted under the NET Bible&#8217;s published quotation terms.</p>
@@ -215,9 +291,10 @@ def main():
     toc.append(("About This Edition", "about.xhtml", []))
 
     current = None
+    tn_groups = {}  # appendix file -> (group, [(section file, heading, notes html)])
     for i, path in enumerate(files):
         name = os.path.basename(path)
-        heading, label, body = convert_file(path)
+        heading, label, body, tn_html = convert_file(path)
         fn = f"s{i:03d}.xhtml"
         if name.startswith("00-advertisement"):
             group = "adv"
@@ -225,6 +302,10 @@ def main():
             group = "intro"
         else:
             group = int(re.match(r"ch(\d+)", name).group(1))
+        if tn_html:
+            tfn = f"tn-{group:02d}.xhtml" if isinstance(group, int) else f"tn-{group}.xhtml"
+            tn_groups.setdefault(tfn, (group, []))[1].append((fn, heading, tn_html))
+            body += f'\n<p class="tn-link"><a href="{tfn}#t{fn[:-6]}">Translator&#8217;s notes on this section</a></p>'
         if group != current:
             current = group
             if group == "adv":
@@ -241,6 +322,39 @@ def main():
         if group != "intro":
             toc[-1][2].append((label, fn))
         docs.append((fn, heading, xhtml_doc(heading, body)))
+
+    # Appendix: the translator's notes, one file per chapter, each section linked both ways.
+    intro_page = ('<h1>Translator&#8217;s Notes</h1>\n<div class="front"><p>These notes record word choices '
+                  '(Baxter&#8217;s word, then ours), places where the NET Bible changes the sense Baxter relies on, '
+                  'corrected references, unmarked Scripture allusions, and oddities in the source. Each section of the '
+                  'book ends with a link to its notes here, and each heading here links back to its section.</p></div>')
+    docs.append(("tn.xhtml", "Translator's Notes", xhtml_doc("Translator's Notes", intro_page)))
+    tn_kids = []
+    for tfn, (group, items) in tn_groups.items():
+        name = ("Advertisement to the Readers" if group == "adv" else
+                "Part 1: Christian Ethics (Introduction)" if group == "intro" else f"Chapter {group}")
+        parts = [f'<h2 class="tn-chapter">{name}</h2>']
+        for sfn, heading, tn_html in items:
+            parts.append(f'<h3 id="t{sfn[:-6]}"><a href="{sfn}">{html.escape(heading)}</a></h3>\n'
+                         f'<div class="tn">{tn_html}</div>')
+        docs.append((tfn, f"Translator's Notes: {name}", xhtml_doc(f"Translator's Notes: {name}", "\n".join(parts))))
+        tn_kids.append((name, tfn))
+    toc.append(("Translator's Notes", "tn.xhtml", tn_kids))
+
+    # Two printed contents pages: a short one (chapters only) and a detailed one (every section).
+    brief = ['<h1>Contents</h1>', '<p class="toc-note"><a href="contents-full.xhtml">Detailed contents (every section)</a></p>',
+             '<ul class="toc">']
+    full = ['<h1>Detailed Contents</h1>', '<p class="toc-note"><a href="contents.xhtml">Short contents</a></p>']
+    for label, href, kids in toc:
+        brief.append(f'<li><a href="{href}">{html.escape(label)}</a></li>')
+        full.append(f'<p class="toc-group"><a href="{href}">{html.escape(label)}</a></p>')
+        if kids:
+            full.append('<ul class="toc">' + "".join(f'<li><a href="{h}">{html.escape(l)}</a></li>' for l, h in kids) + '</ul>')
+    brief.append('</ul>')
+    at = next(i for i, d in enumerate(docs) if d[0] == "about.xhtml") + 1
+    docs[at:at] = [("contents.xhtml", "Contents", xhtml_doc("Contents", "\n".join(brief), "toc-page")),
+                   ("contents-full.xhtml", "Detailed Contents", xhtml_doc("Detailed Contents", "\n".join(full), "toc-page"))]
+    toc[1:1] = [("Contents", "contents.xhtml", []), ("Detailed Contents", "contents-full.xhtml", [])]
 
     # Check every document is well-formed XML before packaging.
     for fn, _, x in docs:
@@ -262,8 +376,8 @@ def main():
     nav = xhtml_doc("Contents", '<nav epub:type="toc" id="toc"><h1>Contents</h1><ol>\n' + nav_items(toc) + "\n</ol></nav>"
                     '\n<nav epub:type="landmarks" hidden=""><ol>'
                     '<li><a epub:type="cover" href="cover.xhtml">Cover</a></li>'
-                    '<li><a epub:type="toc" href="nav.xhtml">Contents</a></li>'
-                    f'<li><a epub:type="bodymatter" href="{toc[1][1]}">Beginning</a></li></ol></nav>')
+                    '<li><a epub:type="toc" href="contents.xhtml">Contents</a></li>'
+                    f'<li><a epub:type="bodymatter" href="{toc[3][1]}">Beginning</a></li></ol></nav>')
     ElementTree.fromstring(nav.encode("utf-8"))
 
     ncx_pts, order = "", 0
@@ -293,8 +407,7 @@ def main():
         iid = fn.replace(".xhtml", "")
         manifest.append(f'<item id="{iid}" href="{fn}" media-type="application/xhtml+xml"/>')
         spine.append(f'<itemref idref="{iid}"/>')
-        if fn == "about.xhtml":
-            spine.append('<itemref idref="nav"/>')
+    spine.append('<itemref idref="nav" linear="no"/>')
     opf = f"""<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="bookid" xml:lang="en">
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
