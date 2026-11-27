@@ -2,20 +2,24 @@
 # requires-python = ">=3.10"
 # dependencies = ["markdown>=3.5", "pillow>=10"]
 # ///
-"""Build an EPUB of the modernized text, formatted for Kindle and other readers.
+"""Build an EPUB of one volume of a modernized work, formatted for Kindle and other readers.
 
 Run from the repository root:
 
-    uv run tools/build_epub.py
+    uv run tools/build_epub.py baxter-christian-directory part1
 
-Writes dist/baxter-christian-directory-part1.epub. Each source file becomes one
-XHTML file; chapters get a title page. Baxter's footnote markers become links
-to his notes (and back), which Kindle shows as pop-up notes.
+Reads works/<work>/work.json for titles, chapter names, and grouping, and
+writes dist/<epub file>. Each modernized source file becomes one XHTML file;
+chapters get a title page. The author's footnote markers become links to the
+notes (and back), which Kindle shows as pop-up notes; the translator's notes
+go to an appendix.
 """
+import argparse
 import datetime
 import glob
 import html
 import io
+import json
 import os
 import re
 import uuid
@@ -26,26 +30,42 @@ import markdown
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SRC_DIR = os.path.join(ROOT, "modernized", "part1-ethics")
-OUT = os.path.join(ROOT, "dist", "baxter-christian-directory-part1.epub")
 
-TITLE = "A Christian Directory, Part 1: Christian Ethics"
-SUBTITLE = "A Modernized Edition (Draft)"
-AUTHOR = "Richard Baxter"
-BOOK_ID = "urn:uuid:" + str(uuid.uuid5(uuid.NAMESPACE_URL, "https://github.com/jgsuresh/baxter-christian-directory/part1"))
+# Set by configure() from works/<work>/work.json.
+WORK = VOL = EP = None
+SRC_DIR = OUT = TITLE = SUBTITLE = AUTHOR = AUTHOR_SHORT = BOOK_ID = None
+REPO_URL = "https://github.com/jgsuresh/puritan-modernized"
 
-CHAPTERS = {
-    1: "Directions to Unconverted Sinners, and the Temptations That Hinder Conversion",
-    2: "Directions to Young Christians or Beginners in Religion, for Their Establishment and Safe Proceeding",
-    3: "The General Grand Directions for Walking with God, in a Life of Faith and Holiness",
-    4: "Subordinate Directions Against Those Grand Heart Sins Which Are Directly Contrary to the Life of Godliness and Christianity",
-    5: "Further Subordinate Directions for the Next Great Duties of Religion (Redeeming Time)",
-    6: "Directions for the Government of the Thoughts",
-    7: "Directions for the Government of the Passions",
-    8: "Directions for the Government of the Senses",
-    9: "Directions for the Government of the Tongue",
-    10: "Directions for the Government of the Body",
-}
+
+def configure(work_slug, volume):
+    global WORK, VOL, EP, SRC_DIR, OUT, TITLE, SUBTITLE, AUTHOR, AUTHOR_SHORT, BOOK_ID
+    work_dir = os.path.join(ROOT, "works", work_slug)
+    WORK = json.load(open(os.path.join(work_dir, "work.json"), encoding="utf-8"))
+    VOL = WORK["volumes"][volume]
+    if "epub" not in VOL:
+        raise SystemExit(f"work.json has no 'epub' settings for {volume}")
+    EP = VOL["epub"]
+    SRC_DIR = os.path.join(work_dir, VOL["dir"])
+    OUT = os.path.join(ROOT, "dist", EP["file"])
+    TITLE, SUBTITLE = EP["title"], EP.get("subtitle", "A Modernized Edition (Draft)")
+    AUTHOR, AUTHOR_SHORT = WORK["author"], WORK["author_short"]
+    BOOK_ID = "urn:uuid:" + str(uuid.uuid5(uuid.NAMESPACE_URL, EP.get("id_seed", f"{REPO_URL}/{work_slug}/{volume}")))
+
+
+def group_of(name):
+    """Which group (chapter number, or index of a named group in work.json) a source file belongs to."""
+    for gi, g in enumerate(EP["groups"]):
+        m = re.match(g["match"], name)
+        if m:
+            return int(m.group(1)) if g.get("chapter") else f"g{gi}"
+    raise SystemExit(f"No group in work.json matches {name}")
+
+
+def group_label(group, long=True):
+    if isinstance(group, int):
+        return f"Chapter {group}: {EP['chapters'][str(group)]}" if long else f"Chapter {group}"
+    return EP["groups"][int(group[1:])]["label"]
+
 
 CSS = """
 body { margin: 0 2%; line-height: 1.4; }
@@ -130,20 +150,20 @@ def convert_file(path):
     # Repository-relative links (e.g. to NOTICE.md) mean nothing in the book: keep the text only.
     text = re.sub(r"\[([^\]]+)\]\((?!https?:)[^)]+\)", r"\1", text)
 
-    # Keep Baxter's numbering exactly: stop Markdown from turning "7. ..." into a renumbered list.
+    # Keep the author's numbering exactly: stop Markdown from turning "7. ..." into a renumbered list.
     text = re.sub(r"^(\d+)\. ", r"\1\\. ", text, flags=re.M)
 
     # Translator's notes go to an appendix at the back of the book, not after each section.
     tsplit = re.search(r"^## Translator's notes\s*$", text, flags=re.M)
     text, tnotes = (text[:tsplit.start()], text[tsplit.end():]) if tsplit else (text, "")
 
-    split = re.search(r"^## Baxter's notes\s*$", text, flags=re.M)
+    split = re.search(r"^## [^\n]*'s notes\s*$", text, flags=re.M)
     body, notes = (text[:split.start()], text[split.start():]) if split else (text, "")
     if not note_lines(notes):
         notes = ""  # "None in this section." adds nothing for a reader
     else:
         # Everything between the heading and the first note is editorial preamble that repeats.
-        notes = re.sub(r"\A(## Baxter's notes\s*\n).*?(?=^\[\d+\](?= |$))", r"\1\n", notes, flags=re.S | re.M)
+        notes = re.sub(r"\A(## [^\n]*'s notes\s*\n).*?(?=^\[\d+\](?= |$))", r"\1\n", notes, flags=re.S | re.M)
         notes = drop_boilerplate(notes)
     tnotes = drop_boilerplate(tnotes)
     body = re.sub(r"\n---\s*$", "\n", body.rstrip() + "\n")  # rule that separated the notes
@@ -195,14 +215,14 @@ def convert_file(path):
 # Bible, and where references come from). "About This Edition" says each of these once, so the book
 # drops a note block that says nothing else, and drops such sentences from blocks that do say more.
 BOILER = [
-    r"(Baxter's notes are |Notes are |Footnotes are |These are )?[Rr]eproduced (exactly |in full )?as (in the source|printed)[^.;]*[.;]",
+    r"([A-Z][a-z]+'s notes are |Notes are |Footnotes are |These are )?[Rr]eproduced (exactly |in full )?as (in the source|printed)[^.;]*[.;]",
     r"The Latin( and Greek)? (is|are) (reproduced|kept|given) (exactly )?as printed[^.]*\.",
     r"[^.;]*draft (English )?translations?[^.]*?(fine points|Latinist['’]?s? check[^.]*|check[^.]*Latinist[^.]*|Latinist[^.]*)\.",
     r"[^.;]*(prepared for this project|need[s]? a Latinist)[^.]*\.",
     r"English (in|inside) (the|a) (notes|footnotes?) is modernized[^.]*\.",
     r"(Its|Their|The) English (is|has been) modernized[^.]*\.",
-    r"Baxter's (own )?English (in|inside) (the|these|this) (notes?|footnotes?) (is|are) modernized\.",
-    r"Baxter's own footnotes quote Latin authors\.",
+    r"[A-Z][a-z]+'s (own )?English (in|inside) (the|these|this) (notes?|footnotes?) (is|are) modernized\.",
+    r"[A-Z][a-z]+'s own footnotes quote Latin authors\.",
     r"(There is no|No) Latin or Greek[^.]*\.", r"None of these notes contains? Latin or Greek\.",
     r"\(?[^.()]*Scripture references[^.()]*(modern form|converted)[^.()]*\)?\.?",
     r"(The Latin is|Latin and Greek are) not modernized[,;] (and )?a draft English translation follows[^.]*\.",
@@ -246,7 +266,7 @@ SCRIPTURE_REF = re.compile(r"^(See |Compare )?([1-3] )?[A-Z][a-z]+\.? \d+[:.]?\d
 
 
 def side_heading(mo):
-    """Baxter's margin notes mostly name the topic of the paragraph below, so show them as small headings.
+    """The author's margin notes mostly name the topic of the paragraph below, so show them as small headings.
     A margin note that is only a Scripture reference stays a small italic line."""
     text = mo.group(1).strip()
     if SCRIPTURE_REF.match(text) and len(text) < 80:
@@ -258,7 +278,7 @@ LEAD = r"(?:Grand Direction|Direction|Temptation|Sign|Rule|Title|Instance|Motive
 
 
 def polish(body):
-    """Reading aids for the book only: spacing and weight that make Baxter's structure easy to scan."""
+    """Reading aids for the book only: spacing and weight that make the author's structure easy to scan."""
     # Our editorial "this section begins partway..." lines help editors, not readers: drop them.
     continued = bool(re.search(r"<p><em>(This (section|file|part|range) (begins|opens|starts|continues|runs)|Continued from|Continues part)", body))
     body = re.sub(r"<p><em>(This (section|file|part|range) (begins|opens|starts|continues|runs)|Continued from|Continues part)[^<]*(<[^/][^>]*>[^<]*</[^>]+>[^<]*)*</em></p>\s*", "", body)
@@ -269,7 +289,7 @@ def polish(body):
     # Objection / Question / Answer labels: bold italic, and space before objections and questions.
     body = re.sub(r"<p><em>((?:Objection|Object\.|Question|Quest|Instance|Case)[^<]{0,12})</em>", r'<p class="qa"><strong><em>\1</em></strong>', body)
     body = re.sub(r"<p><em>(Answers?[^<]{0,12})</em>", r'<p><strong><em>\1</em></strong>', body)
-    # Baxter's numbered points: bold the number so the list is easy to follow.
+    # The author's numbered points: bold the number so the list is easy to follow.
     body = re.sub(r"<p>(\(?\d+\.\)?)(\s)", r'<p><strong class="num">\1</strong>\2', body)
     body = re.sub(r"<p( class=\"[^\"]*\")?>(.*?)</p>", split_points, body, flags=re.S)
     return body, continued
@@ -352,39 +372,47 @@ def make_cover():
 
     d.rectangle([80, 80, w - 80, h - 80], outline=(120, 90, 60), width=6)
     d.rectangle([110, 110, w - 110, h - 110], outline=(120, 90, 60), width=2)
-    center(520, "A CHRISTIAN", 150)
-    center(700, "DIRECTORY", 150)
+    lines = EP["cover"]  # [title line, title line, volume, subtitle line, subtitle line]
+    center(520, lines[0], 150)
+    center(700, lines[1], 150)
     d.line([(500, 940), (w - 500, 940)], fill=(120, 90, 60), width=4)
-    center(1020, "Part 1: Christian Ethics", 84)
-    center(1180, "or, Directions for the Private", 60, (90, 70, 50))
-    center(1260, "Actions of Our Hearts and Lives", 60, (90, 70, 50))
-    center(1760, "RICHARD BAXTER", 96)
-    center(1900, "A Modernized Edition (Draft)", 64, (90, 70, 50))
+    if len(lines) > 2:
+        center(1020, lines[2], 84)
+    for k, extra in enumerate(lines[3:5]):
+        center(1180 + 80 * k, extra, 60, (90, 70, 50))
+    center(1760, AUTHOR.upper(), 96)
+    center(1900, SUBTITLE, 64, (90, 70, 50))
     buf = io.BytesIO()
     img.save(buf, "JPEG", quality=88)
     return buf.getvalue()
 
 
 def front_matter(today):
+    A = html.escape(AUTHOR_SHORT)
     title = (f'<div class="titlepage"><h1>{html.escape(TITLE)}</h1>'
              f'<p><em>{html.escape(SUBTITLE)}</em></p>'
-             f'<p>by {AUTHOR}</p>'
-             '<p>Originally published 1673. Modernized from the 1846 edition.</p></div>')
-    about = """<h1>About This Edition</h1>
+             f'<p>by {html.escape(AUTHOR)}</p>'
+             f'<p>Originally published {WORK["year"]}. Modernized from {html.escape(WORK["edition_short"])}.</p></div>')
+    about = f"""<h1>About This Edition</h1>
 <div class="front">
-<p>This is a word-level modernization of Part 1 (Christian Ethics) of Richard Baxter&#8217;s <em>A Christian Directory</em>, made from the Project Gutenberg transcription of the 1846 edition. Old words, spellings, and verb forms are brought up to date; Baxter&#8217;s sentences are not split, merged, or summarized, so his argument and its order are as he wrote it.</p>
-<p>Quoted Scripture is given in the NET Bible. Where the NET wording changes the sense Baxter relies on, the translator&#8217;s notes at the back of the book say so. Baxter&#8217;s own footnotes follow each section under &#8220;Baxter&#8217;s notes&#8221;; his Latin and Greek are kept as printed, followed by draft English translations made for this project. These translations have not yet been checked by a Latinist. The translator&#8217;s notes, collected at the back of the book, record word choices, corrected references, and source oddities; each section ends with a link to its notes.</p>
-<p>Baxter printed short summaries in the margin beside his paragraphs. Most of them name the topic of the paragraph, so they appear here as small bold headings above it; a margin note that is only a Scripture reference appears as a small italic line. His footnote markers are links: select one to see the note.</p>
+<p>This is a word-level modernization of {html.escape(EP["scope"])} of {html.escape(AUTHOR)}&#8217;s <em>{html.escape(WORK["title"])}</em>, made from {html.escape(WORK["edition"])}. Old words, spellings, and verb forms are brought up to date; {A}&#8217;s sentences are not split, merged, or summarized, so his argument and its order are as he wrote it.</p>
+<p>Quoted Scripture is given in the NET Bible. Where the NET wording changes the sense {A} relies on, the translator&#8217;s notes at the back of the book say so. {A}&#8217;s own footnotes follow each section under &#8220;{A}&#8217;s notes&#8221;; his Latin and Greek are kept as printed, followed by draft English translations made for this project. These translations have not yet been checked by a Latinist. The translator&#8217;s notes, collected at the back of the book, record word choices, corrected references, and source oddities; each section ends with a link to its notes.</p>
+<p>{A} printed short summaries in the margin beside his paragraphs. Most of them name the topic of the paragraph, so they appear here as small bold headings above it; a margin note that is only a Scripture reference appears as a small italic line. His footnote markers are links: select one to see the note.</p>
 <p><strong>Status:</strong> this is a draft. Every section has been drafted and checked against the source, but none has had a final human edit.</p>
 <p><strong>Scripture:</strong> Scripture quotations are from the NET Bible&#174;, copyright &#169; 1996, 2019 by Biblical Studies Press, L.L.C., https://netbible.com. All rights reserved. Quoted under the NET Bible&#8217;s published quotation terms.</p>
-<p><strong>License:</strong> Baxter&#8217;s text is in the public domain. The modernized wording and notes are dedicated to the public domain under CC0; the NET Bible quotations are not covered by that dedication.</p>
-<p>Source and updates: https://github.com/jgsuresh/baxter-christian-directory</p>
-<p>Built """ + today + """.</p>
+<p><strong>License:</strong> {A}&#8217;s text is in the public domain. The modernized wording and notes are dedicated to the public domain under CC0; the NET Bible quotations are not covered by that dedication.</p>
+<p>Source and corrections: {REPO_URL}</p>
+<p>Built {today}.</p>
 </div>"""
     return title, about
 
 
 def main():
+    ap = argparse.ArgumentParser(description="Build an EPUB for one volume of a work.")
+    ap.add_argument("work", help="folder name under works/, e.g. baxter-christian-directory")
+    ap.add_argument("volume", help="volume key in work.json, e.g. part1")
+    args = ap.parse_args()
+    configure(args.work, args.volume)
     # Natural sort, so "p2" comes before "p10".
     files = sorted(glob.glob(os.path.join(SRC_DIR, "*.md")),
                    key=lambda p: [int(t) if t.isdigit() else t for t in re.split(r"(\d+)", os.path.basename(p))])
@@ -406,43 +434,38 @@ def main():
         body = body.replace("{CARRY}", carry + "\n" if carry else "", 1)
         carry = next_carry
         fn = f"s{i:03d}.xhtml"
-        if name.startswith("00-advertisement"):
-            group = "adv"
-        elif name.startswith("00-introduction"):
-            group = "intro"
-        else:
-            group = int(re.match(r"ch(\d+)", name).group(1))
+        group = group_of(name)
         if tn_html:
             tfn = f"tn-{group:02d}.xhtml" if isinstance(group, int) else f"tn-{group}.xhtml"
             tn_groups.setdefault(tfn, (group, []))[1].append((fn, heading, tn_html))
             body += f'\n<p class="tn-link"><a href="{tfn}#t{fn[:-6]}">Translator&#8217;s notes on this section</a></p>'
         if group != current:
             current = group
-            if group == "adv":
-                toc.append(("Advertisement to the Readers", fn, []))
-            elif group == "intro":
-                toc.append(("Part 1: Christian Ethics (Introduction)", fn, []))
-            else:
+            if isinstance(group, int):
                 cfn = f"c{group:02d}.xhtml"
-                page = (f'<h1>Chapter {group}</h1>\n<p class="chapter-title">{html.escape(CHAPTERS[group])}</p>')
+                page = (f'<h1>Chapter {group}</h1>\n<p class="chapter-title">{html.escape(EP["chapters"][str(group)])}</p>')
                 docs.append((cfn, f"Chapter {group}", xhtml_doc(f"Chapter {group}", page, "chapter-page")))
-                toc.append((f"Chapter {group}: {CHAPTERS[group]}", cfn, []))
-        if group == "adv":
-            label = re.sub(r"^Advertisement to the Readers\s*", "", label).strip(" ()").capitalize() or label
-        if group != "intro":
+                toc.append((group_label(group), cfn, []))
+            else:
+                toc.append((group_label(group), fn, []))
+        single = not isinstance(group, int) and EP["groups"][int(group[1:])].get("single")
+        if not isinstance(group, int):
+            # "Advertisement to the Readers (part 1 of 3)" -> "Part 1 of 3" under its group heading
+            short = re.sub("^" + re.escape(group_label(group)) + r"\s*", "", label).strip(" ()")
+            label = (short[:1].upper() + short[1:]) if short else label
+        if not single:
             toc[-1][2].append((label, fn))
         docs.append((fn, heading, xhtml_doc(heading, body)))
 
     # Appendix: the translator's notes, one file per chapter, each section linked both ways.
     intro_page = ('<h1>Translator&#8217;s Notes</h1>\n<div class="front"><p>These notes record word choices '
-                  '(Baxter&#8217;s word, then ours), places where the NET Bible changes the sense Baxter relies on, '
+                  f'({html.escape(AUTHOR_SHORT)}&#8217;s word, then ours), places where the NET Bible changes the sense {html.escape(AUTHOR_SHORT)} relies on, '
                   'corrected references, unmarked Scripture allusions, and oddities in the source. Each section of the '
                   'book ends with a link to its notes here, and each heading here links back to its section.</p></div>')
     docs.append(("tn.xhtml", "Translator's Notes", xhtml_doc("Translator's Notes", intro_page)))
     tn_kids = []
     for tfn, (group, items) in tn_groups.items():
-        name = ("Advertisement to the Readers" if group == "adv" else
-                "Part 1: Christian Ethics (Introduction)" if group == "intro" else f"Chapter {group}")
+        name = group_label(group, long=False)
         parts = [f'<h2 class="tn-chapter">{name}</h2>']
         for sfn, heading, tn_html in items:
             parts.append(f'<h3 id="t{sfn[:-6]}"><a href="{sfn}">{html.escape(heading)}</a></h3>\n'
@@ -528,7 +551,7 @@ def main():
 <meta refines="#t2" property="title-type">subtitle</meta>
 <dc:creator id="a1">{AUTHOR}</dc:creator>
 <meta refines="#a1" property="role" scheme="marc:relators">aut</meta>
-<meta refines="#a1" property="file-as">Baxter, Richard</meta>
+<meta refines="#a1" property="file-as">{html.escape(WORK["author_file_as"])}</meta>
 <dc:language>en</dc:language>
 <dc:date>{today}</dc:date>
 <dc:subject>Christian ethics</dc:subject>

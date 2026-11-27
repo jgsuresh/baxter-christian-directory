@@ -1,0 +1,102 @@
+{
+  "slug": "baxter-christian-directory",
+  "title": "A Christian Directory",
+  "full_title": "A Christian Directory, or, A Sum of Practical Theology and Cases of Conscience",
+  "author": "Richard Baxter",
+  "author_short": "Baxter",
+  "author_file_as": "Baxter, Richard",
+  "year": 1673,
+  "edition": "the Project Gutenberg transcription of the 1846 edition",
+  "edition_short": "the 1846 edition",
+  "page_url": "https://jgsuresh.github.io/texts/baxter-christian-directory/",
+  "volumes": {
+    "part1": {
+      "name": "Part 1: Christian Ethics",
+      "source": "original/part1-gutenberg-41633.txt",
+      "gutenberg": 41633,
+      "dir": "modernized/part1-ethics",
+      "epub": {
+        "file": "baxter-christian-directory-part1.epub",
+        "title": "A Christian Directory, Part 1: Christian Ethics",
+        "subtitle": "A Modernized Edition (Draft)",
+        "id_seed": "https://github.com/jgsuresh/baxter-christian-directory/part1",
+        "cover": [
+          "A CHRISTIAN",
+          "DIRECTORY",
+          "Part 1: Christian Ethics",
+          "or, Directions for the Private",
+          "Actions of Our Hearts and Lives"
+        ],
+        "scope": "Part 1 (Christian Ethics)",
+        "groups": [
+          {
+            "match": "^00-advertisement",
+            "label": "Advertisement to the Readers"
+          },
+          {
+            "match": "^00-introduction",
+            "label": "Part 1: Christian Ethics (Introduction)",
+            "single": true
+          },
+          {
+            "match": "^ch(\\d+)-",
+            "chapter": true
+          }
+        ],
+        "chapters": {
+          "1": "Directions to Unconverted Sinners, and the Temptations That Hinder Conversion",
+          "2": "Directions to Young Christians or Beginners in Religion, for Their Establishment and Safe Proceeding",
+          "3": "The General Grand Directions for Walking with God, in a Life of Faith and Holiness",
+          "4": "Subordinate Directions Against Those Grand Heart Sins Which Are Directly Contrary to the Life of Godliness and Christianity",
+          "5": "Further Subordinate Directions for the Next Great Duties of Religion (Redeeming Time)",
+          "6": "Directions for the Government of the Thoughts",
+          "7": "Directions for the Government of the Passions",
+          "8": "Directions for the Government of the Senses",
+          "9": "Directions for the Government of the Tongue",
+          "10": "Directions for the Government of the Body"
+        }
+      },
+      "known_gaps": [
+        {
+          "lines": [
+            1970,
+            1970
+          ],
+          "why": "the letter 'A' that begins the heading 'A Christian Directory' after the Advertisement"
+        },
+        {
+          "lines": [
+            2126,
+            2129
+          ],
+          "why": "end of the Introduction's footnote [8], carried in full under the Introduction's notes"
+        },
+        {
+          "lines": [
+            2334,
+            2335
+          ],
+          "why": "a margin note given in ch01-part1-03"
+        }
+      ]
+    },
+    "part2": {
+      "name": "Part 2: Christian Economics",
+      "source": "original/part2-gutenberg-43800.txt",
+      "gutenberg": 43800,
+      "dir": "modernized/part2-economics"
+    },
+    "part3": {
+      "name": "Part 3: Christian Ecclesiastics",
+      "source": "original/part3-gutenberg-44655.txt",
+      "gutenberg": 44655,
+      "dir": "modernized/part3-ecclesiastics"
+    },
+    "part4": {
+      "name": "Part 4: Christian Politics",
+      "source": "original/part4-gutenberg-43967.txt",
+      "gutenberg": 43967,
+      "dir": "modernized/part4-politics"
+    }
+  }
+}
