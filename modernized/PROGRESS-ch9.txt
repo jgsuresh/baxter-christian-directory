@@ -8,3 +8,12 @@ written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-et
 written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch09-01-p2-sins-of-the-tongue-and-keeping-the-heart.md
 written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch09-03-p2-questions-10-11-what-a-lie-is-direction-01.md
 written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch09-03-p4-directions-7-12-against-lying-is-frequent-lying-mortal.md
+written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch09-05-p1-title-5-against-filthy-ribald-talk-directions-1-10.md
+written: modernized/part1-ethics/ch09-04-p2-aggravations-and-mischief-of-idle-talk.md
+written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch09-06-p1-against-scorning-godliness-direction-01-points-1-8.md
+written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch09-03-p5-questions-2-9-harmless-lies-equivocation-reports.md
+written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch09-06-p2-what-the-scorner-derides-points-9-to-20.md
+written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch09-06-p3-scorning-holiness-aggravations-3-to-19.md
+written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch09-04-p1-title-4-what-idle-talk-is-and-its-sorts.md
+written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch09-04-p3-directions-4-16-against-idle-talk-who-must-watch.md
+written: /Users/josh/personal/microprojects/baxter_directory/modernized/part1-ethics/ch09-06-p4-last-motive-and-directions-1-8-against-scorning.md
