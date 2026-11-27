@@ -23,6 +23,9 @@ export const meta = {
 //   date: '2026-11-27',    // for the front matter
 // }
 const A = args
+for (const k of ['work', 'source', 'out', 'unit', 'heading', 'labelling', 'footnotes', 'jobs', 'date']) {
+  if (!A || A[k] === undefined) throw new Error('modernize.js: missing args.' + k)
+}
 const ROOT = '/Users/josh/personal/microprojects/baxter_directory'
 const W = 'works/' + A.work
 const SRC = W + '/' + A.source

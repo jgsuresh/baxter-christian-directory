@@ -84,7 +84,59 @@
       "name": "Part 2: Christian Economics",
       "source": "original/part2-gutenberg-43800.txt",
       "gutenberg": 43800,
-      "dir": "modernized/part2-economics"
+      "dir": "modernized/part2-economics",
+      "epub": {
+        "file": "baxter-christian-directory-part2.epub",
+        "title": "A Christian Directory, Part 2: Christian Economics",
+        "subtitle": "A Modernized Edition (Draft)",
+        "cover": [
+          "A CHRISTIAN",
+          "DIRECTORY",
+          "Part 2: Christian Economics",
+          "or, The Family Directory",
+          ""
+        ],
+        "scope": "Part 2 (Christian Economics, or the Family Directory)",
+        "groups": [
+          {
+            "match": "^ch(\\d+)-",
+            "chapter": true
+          }
+        ],
+        "chapters": {
+          "1": "Directions About Marriage: Choice and Contract",
+          "2": "Directions for the Right Choice of Servants and Masters",
+          "3": "A Disputation Proving the Necessity of Family Worship and Holiness",
+          "4": "General Directions for the Holy Government of Families",
+          "5": "Special Motives to Govern Families in a Holy Way",
+          "6": "More Special Motives for a Holy and Careful Education of Children",
+          "7": "The Mutual Duties of Husbands and Wives Toward Each Other",
+          "8": "The Special Duties of Husbands to Their Wives",
+          "9": "The Special Duties of Wives to Husbands",
+          "10": "The Duties of Parents for Their Children",
+          "11": "The Special Duties of Children Toward Their Parents",
+          "12": "The Special Duties of Children and Youth Toward God",
+          "13": "The Duties of Servants to Their Masters",
+          "14": "The Duties of Masters Toward Their Servants",
+          "15": "The Duties of Children and Fellow-Servants to One Another",
+          "16": "Directions for Holy Conversation Among Fellow-Servants and Others",
+          "17": "How Each Member of the Family Should Spend an Ordinary Day",
+          "18": "Directions for the Order of Holy Duties",
+          "19": "Directions for Profitably Hearing the Word Preached",
+          "20": "Directions for Profitably Reading the Holy Scriptures",
+          "21": "Directions for Reading Other Books",
+          "22": "Directions for Rightly Teaching Children and Servants",
+          "23": "Directions for Prayer in General",
+          "24": "Brief Directions for Families About the Lord's Supper",
+          "25": "Directions for Fearful, Troubled Christians Perplexed with Doubts",
+          "26": "Directions for Declining or Backsliding Christians, and About Perseverance",
+          "27": "Directions for the Poor",
+          "28": "Directions for the Rich",
+          "29": "Directions for the Aged and Weak",
+          "30": "Directions for the Sick",
+          "31": "Directions to the Friends of the Sick"
+        }
+      }
     },
     "part3": {
       "name": "Part 3: Christian Ecclesiastics",
