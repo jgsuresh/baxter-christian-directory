@@ -52,10 +52,17 @@ body { margin: 0 2%; line-height: 1.4; }
 p { margin: 0 0 0.6em 0; text-indent: 0; text-align: left; }
 h1 { font-size: 1.6em; text-align: center; margin: 2em 0 0.8em 0; page-break-before: always; }
 h2 { font-size: 1.25em; margin: 1.6em 0 0.8em 0; page-break-before: always; }
+h2.cont { font-size: 0.85em; font-weight: normal; font-style: italic; color: #666; text-align: center; margin: 2em 0 1.2em 0; page-break-before: auto; }
+h3.division { font-size: 1.1em; text-align: center; margin: 2em 0 1em 0; page-break-after: avoid; }
+p.lead { margin-top: 1.6em; }
+p.pt { margin-left: 1.2em; }
+p.pt2 { margin-left: 2.4em; }
+p.qa { margin-top: 1.1em; }
 h3 { font-size: 1.05em; margin: 1.6em 0 0.6em 0; }
 .chapter-page h1 { margin-top: 30%; font-size: 1.8em; }
 .chapter-page p.chapter-title { text-align: center; font-style: italic; font-size: 1.15em; margin: 1em 10%; }
 p.margin { font-size: 0.85em; margin: 0.8em 0 0.3em 1.5em; color: #444; }
+h4.sidehead { font-size: 0.95em; font-weight: bold; font-style: italic; color: #333; margin: 1.4em 0 0.4em 0; page-break-after: avoid; }
 sup.noteref { font-size: 0.7em; line-height: 0; }
 sup.noteref a, a.noteback { text-decoration: none; }
 .notes { font-size: 0.88em; }
@@ -160,7 +167,14 @@ def convert_file(path):
 
     body_html = md_to_html(body)
     body_html = body_html.replace("<h2>", "<h3>").replace("</h2>", "</h3>")
-    body_html = re.sub(r"<p><em>In the margin:", r'<p class="margin"><em>In the margin:', body_html)
+    # A margin note left at the very end of a file belongs to the next section: hand it on.
+    carry = ""
+    tail = re.search(r"<p><em>In the margin(?: \([^)]*\))?: (.*?)</em>\s*\(This margin note[^)]*\)</p>\s*$", body_html, flags=re.S)
+    if tail:
+        carry = side_heading(tail)
+        body_html = body_html[:tail.start()]
+    body_html = re.sub(r"<p><em>In the margin(?: \([^)]*\))?: (.*?)</em></p>", side_heading, body_html, flags=re.S)
+    body_html, continued = polish(body_html)
     notes_html = md_to_html(notes).replace("<h2>", "<h3>").replace("</h2>", "</h3>") if notes else ""
     if notes_html:
         notes_html = f'<section class="notes" epub:type="rearnotes">\n{notes_html}\n</section>'
@@ -168,9 +182,13 @@ def convert_file(path):
     label = re.sub(r"^Chapter \d+[,:]?\s*", "", heading).strip() or heading
     if label[:1].islower():
         label = label[0].upper() + label[1:]
-    out = f"<h2>{html.escape(heading)}</h2>\n{body_html}\n{notes_html}"
+    continued = continued or bool(re.search(r"\(part ([2-9]|\d\d) of \d+\)|continued", heading))
+    h2 = re.sub(r"^Chapter \d+[,:]?\s*", "", heading).strip() or heading
+    h2 = h2[0].upper() + h2[1:]
+    cls = ' class="cont"' if continued else ""
+    out = f"<h2{cls}>{html.escape(h2)}</h2>\n{{CARRY}}{body_html}\n{notes_html}"
     tn_html = md_to_html(tnotes) if tnotes.strip() else ""
-    return heading, label, out, tn_html
+    return heading, label, out, tn_html, carry
 
 
 # Boilerplate that the drafts repeat in many sections (about the draft Latin translations, the NET
@@ -224,6 +242,93 @@ def drop_boilerplate(md):
     return "\n".join(out)
 
 
+SCRIPTURE_REF = re.compile(r"^(See |Compare )?([1-3] )?[A-Z][a-z]+\.? \d+[:.]?\d*")
+
+
+def side_heading(mo):
+    """Baxter's margin notes mostly name the topic of the paragraph below, so show them as small headings.
+    A margin note that is only a Scripture reference stays a small italic line."""
+    text = mo.group(1).strip()
+    if SCRIPTURE_REF.match(text) and len(text) < 80:
+        return f'<p class="margin"><em>{text}</em></p>'
+    return f'<h4 class="sidehead">{text[:-1] if text.endswith(".") else text}</h4>'
+
+
+LEAD = r"(?:Grand Direction|Direction|Temptation|Sign|Rule|Title|Instance|Motive|Help|Reason|Mark|Cause|Question|Objection|Answer|Case)"
+
+
+def polish(body):
+    """Reading aids for the book only: spacing and weight that make Baxter's structure easy to scan."""
+    # Our editorial "this section begins partway..." lines help editors, not readers: drop them.
+    continued = bool(re.search(r"<p><em>(This (section|file|part|range) (begins|opens|starts|continues|runs)|Continued from|Continues part)", body))
+    body = re.sub(r"<p><em>(This (section|file|part|range) (begins|opens|starts|continues|runs)|Continued from|Continues part)[^<]*(<[^/][^>]*>[^<]*</[^>]+>[^<]*)*</em></p>\s*", "", body)
+    # A heading that stands alone in bold ("Title 2. Directions against ...", "Part 3.") becomes a heading.
+    body = re.sub(r"<p><strong>((?:Title|Part) [^<]{0,200})</strong></p>", r'<h3 class="division">\1</h3>', body)
+    # Directions, Temptations, Signs, Rules: space above so each one starts visibly.
+    body = re.sub(r"<p><strong>(" + LEAD + r" \d+)", r'<p class="lead"><strong>\1', body)
+    # Objection / Question / Answer labels: bold italic, and space before objections and questions.
+    body = re.sub(r"<p><em>((?:Objection|Object\.|Question|Quest|Instance|Case)[^<]{0,12})</em>", r'<p class="qa"><strong><em>\1</em></strong>', body)
+    body = re.sub(r"<p><em>(Answers?[^<]{0,12})</em>", r'<p><strong><em>\1</em></strong>', body)
+    # Baxter's numbered points: bold the number so the list is easy to follow.
+    body = re.sub(r"<p>(\(?\d+\.\)?)(\s)", r'<p><strong class="num">\1</strong>\2', body)
+    body = re.sub(r"<p( class=\"[^\"]*\")?>(.*?)</p>", split_points, body, flags=re.S)
+    return body, continued
+
+
+# Inline numbered points: "...as follows: 1. The first... 2. The second..." The book starts each point
+# on its own indented line. Only numbers that run in order (1, 2, 3...) after the end of a sentence or
+# clause count, so years, references and stray numbers are left alone. Sentences are not changed.
+POINT = re.compile(r"(?<= )(\(?)(\d+)\.(\)?) (?=[A-Z\"\u201c(\[<])")
+
+
+def after_clause_end(text):
+    """True if the text before a number ends a sentence or clause (ignoring closing tags and brackets)."""
+    tail = re.sub(r"(</[a-z]+>|[)\]\"\u201d\u2019'\s])+$", "", text)
+    return tail[-1:] in (".", ":", ";", "?", "!")
+
+
+def split_points(mo):
+    attrs, inner = mo.group(1) or "", mo.group(2)
+    if 'class="margin"' in attrs:
+        return mo.group(0)
+    lead = re.match(r"(?:<strong class=\"num\">)?(\(?)(\d+)\.(\)?)", inner)
+    cands = []
+    for m in POINT.finditer(inner):
+        if not after_clause_end(inner[:m.start()]):
+            continue
+        cands.append((m.start(), "p" if m.group(1) else "n", int(m.group(2)), m.group(0)))
+    cuts = []
+    for style in ("n", "p"):
+        expected, begins = 1, False
+        if lead and (("p" if lead.group(1) else "n") == style):
+            expected, begins = int(lead.group(2)) + 1, True
+        picked = []
+        for pos, st, num, text in cands:
+            if st == style and num == expected:
+                picked.append((pos, st, text))
+                expected += 1
+        if len(picked) >= 2 or (begins and picked):
+            cuts += picked
+    if not cuts:
+        return mo.group(0)
+    cuts.sort()
+    pieces, last = [], 0
+    for pos, st, text in cuts:
+        pieces.append((inner[last:pos].rstrip(), None))
+        last = pos
+    pieces.append((inner[last:], None))
+    for tag in ("em", "strong", "a", "sup"):
+        for piece, _ in pieces:
+            if piece.count(f"<{tag}") != piece.count(f"</{tag}>"):
+                return mo.group(0)  # a split would break inline markup: leave this paragraph whole
+    out = [f"<p{attrs}>{pieces[0][0]}</p>"] if pieces[0][0].strip() else []
+    for (pos, st, text), (piece, _) in zip(cuts, pieces[1:]):
+        num = text.strip()
+        piece = f'<strong class="num">{num}</strong>' + piece[len(text) - 1:]
+        out.append(f'<p class="{"pt2" if st == "p" else "pt"}">{piece}</p>')
+    return "\n".join(out)
+
+
 def note_lines(notes):
     return re.findall(r"^\[\d+\](?= |$)", notes, flags=re.M)
 
@@ -269,7 +374,7 @@ def front_matter(today):
 <div class="front">
 <p>This is a word-level modernization of Part 1 (Christian Ethics) of Richard Baxter&#8217;s <em>A Christian Directory</em>, made from the Project Gutenberg transcription of the 1846 edition. Old words, spellings, and verb forms are brought up to date; Baxter&#8217;s sentences are not split, merged, or summarized, so his argument and its order are as he wrote it.</p>
 <p>Quoted Scripture is given in the NET Bible. Where the NET wording changes the sense Baxter relies on, the translator&#8217;s notes at the back of the book say so. Baxter&#8217;s own footnotes follow each section under &#8220;Baxter&#8217;s notes&#8221;; his Latin and Greek are kept as printed, followed by draft English translations made for this project. These translations have not yet been checked by a Latinist. The translator&#8217;s notes, collected at the back of the book, record word choices, corrected references, and source oddities; each section ends with a link to its notes.</p>
-<p>Baxter&#8217;s margin summaries appear as small italic lines beginning &#8220;In the margin.&#8221; His footnote markers are links: select one to see the note.</p>
+<p>Baxter printed short summaries in the margin beside his paragraphs. Most of them name the topic of the paragraph, so they appear here as small bold headings above it; a margin note that is only a Scripture reference appears as a small italic line. His footnote markers are links: select one to see the note.</p>
 <p><strong>Status:</strong> this is a draft. Every section has been drafted and checked against the source, but none has had a final human edit.</p>
 <p><strong>Scripture:</strong> Scripture quotations are from the NET Bible&#174;, copyright &#169; 1996, 2019 by Biblical Studies Press, L.L.C., https://netbible.com. All rights reserved. Quoted under the NET Bible&#8217;s published quotation terms.</p>
 <p><strong>License:</strong> Baxter&#8217;s text is in the public domain. The modernized wording and notes are dedicated to the public domain under CC0; the NET Bible quotations are not covered by that dedication.</p>
@@ -280,7 +385,9 @@ def front_matter(today):
 
 
 def main():
-    files = sorted(glob.glob(os.path.join(SRC_DIR, "*.md")))
+    # Natural sort, so "p2" comes before "p10".
+    files = sorted(glob.glob(os.path.join(SRC_DIR, "*.md")),
+                   key=lambda p: [int(t) if t.isdigit() else t for t in re.split(r"(\d+)", os.path.basename(p))])
     today = datetime.date.today().isoformat()
     docs = []   # (filename, title, xhtml)
     toc = []    # [(label, href, [(label, href), ...])]
@@ -291,10 +398,13 @@ def main():
     toc.append(("About This Edition", "about.xhtml", []))
 
     current = None
+    carry = ""      # margin heading handed on from the end of the previous file
     tn_groups = {}  # appendix file -> (group, [(section file, heading, notes html)])
     for i, path in enumerate(files):
         name = os.path.basename(path)
-        heading, label, body, tn_html = convert_file(path)
+        heading, label, body, tn_html, next_carry = convert_file(path)
+        body = body.replace("{CARRY}", carry + "\n" if carry else "", 1)
+        carry = next_carry
         fn = f"s{i:03d}.xhtml"
         if name.startswith("00-advertisement"):
             group = "adv"
